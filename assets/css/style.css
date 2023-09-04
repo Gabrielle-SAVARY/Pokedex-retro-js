@@ -18,13 +18,13 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 10%;
     width: 90%; 
     border-radius: 25px;
     background-color: #fff;
     color: black;
     font-family: 'Bree Serif', serif;
     margin: 1rem;
+    padding: 1.2rem;
 }
 
 h1 {
@@ -32,6 +32,41 @@ h1 {
     color: black;
     text-align: center;
 }
+
+/* BARRE DE RECHERCHE */
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    padding-top: 1rem;
+  }
+  
+  /* Input zone de saisie de texte */
+  #search-input {
+    flex-grow: 1; 
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 4px 0 0 4px; ;
+    font-size: 0.8rem;
+    outline: none; 
+  }
+  
+  /* Bouton icône */
+  #search-button {
+    background-color: #C14040; 
+    border: 1px solid #C14040; 
+    color: #fff; 
+    border-radius: 0 4px 4px 0;
+    padding: 0 10px 0 10px;
+    height: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Animation de changement de couleur */
+  }
+  
+  .search-button:hover {
+    background-color: #982c2c; /* Couleur de fond du bouton au survol */
+  }
+  
 
 main{
     flex-grow: 1;
@@ -41,7 +76,7 @@ main{
     justify-content: center;    
 }
 
-#load-more-button {
+/* #load-more-button {
     background-color: #fff; 
     color: black; 
     border: none; 
@@ -54,18 +89,19 @@ main{
     background-color: black; 
     color: #fff; 
     transition: ease 0.3s all;
-  }
+  } */
 
+	/* LISTE POKEMON */
   #pokemon-list{
     /* height: 80%;
     width: 80%; */
     display: flex;
-    flex-flow: row wrap;  
+    flex-flow: column;  
     align-items: center;
     justify-content: center;   
   }
   
-  /* Style pour les éléments résultants (cartes Pokémon par exemple) */
+  /* Carte pokemon*/
   .pokemon-card {
     display: flex;
     flex-direction: column;
@@ -78,19 +114,18 @@ main{
     color:#fff;
     border-radius: 10px;
     margin: 1rem;
-   
-    /* Styles pour chaque carte Pokemon, comme la couleur de fond, la bordure, etc. */
-    /* Ajoutez ici les styles pour afficher les cartes Pokémon */
+
   }
   
   .pokemon-img {
     height: 70%;
-    width: 60%;    
     display: flex;
+    align-items: center;
     justify-content: center;
     margin: 0.5rem
-
 }
+
+/*Informations pokemon: numéroindex et nom*/
 .pokemon-infos {
     height: 30%;
     width: 100%;    
@@ -106,3 +141,13 @@ main{
     margin: 0.5rem;
     text-align: center;
   }
+
+/* Responsive: Media queries tablet et desktop*/
+@media screen and (min-width: 768px) {
+	#search-input {
+		font-size: 1rem;
+	}
+	#pokemon-list{
+		flex-flow: row wrap;  
+	}
+}

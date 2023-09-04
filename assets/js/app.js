@@ -3,6 +3,8 @@ let pokedex = [];
 let currentPage = 1;
 const pokedexEnd = 151;
 const pokemonPerPage = 20;
+// Barre de recherche
+const searchInput = document.getElementById('search-input');
 
 // Chargement du fichier JSON du pokedex
 async function getPokedex() {
@@ -27,7 +29,7 @@ function displayPokemon(pokemonList,pokemonStart, pokemonMax) {
 		const pokemon = pokedex[i]; 
 
 		// Créez une div pour la carte Pokémon
-		const pokemonCard = document.createElement('div');
+		const pokemonCard = document.createElement('article');
 		pokemonCard.classList.add('pokemon-card'); 
 
 		// Créez une div pour les informations du Pokémon
@@ -63,32 +65,31 @@ function displayPokemon(pokemonList,pokemonStart, pokemonMax) {
 async function loadPokedex() {
 	pokedex = await getPokedex();
 	console.log('pokedex', pokedex);
-	displayPokemon(pokedex,0, pokemonPerPage);
-}
-// Fonction pour charger plus de Pokémon
-function loadMorePokemon() {
-	let filteredPokemon = [...pokedex];
-	const startIndex = (currentPage) * pokemonPerPage;
-	const endIndex = startIndex + pokemonPerPage;
-	currentPage++;
-	console.log('startIndex',startIndex);
-	console.log('endIndex',endIndex);
-	let pokemonMax = currentPage * 20;
-	if (pokemonMax >= pokedexEnd) {
-		const nextPokemon = filteredPokemon.slice(startIndex, pokedexEnd);
-		displayPokemon(nextPokemon, startIndex, pokedexEnd);
-		const loadMoreButton = document.getElementById("load-more-button");
-		loadMoreButton.style.display = "none";
-	} else {
-		const nextPokemon = filteredPokemon.slice(startIndex, endIndex);
-		displayPokemon(nextPokemon, startIndex, pokemonMax);
-	}
+	displayPokemon(pokedex,0, 151);
 }
 
+// Barre de recherche - effectue la recherche et affiche les cartes Pokémon correspondantes
+function handleSearch() {
+  const searchTerm = searchInput.value.toLowerCase();
+  const pokemonCards = document.querySelectorAll('.pokemon-card');
+
+  pokemonCards.forEach(pokemonCard => {
+    const pokemonIdentity = pokemonCard.querySelector('.pokemon-identification').textContent.toLowerCase();
+    const pokemonType = pokemonCard.querySelector('.pokemon-type').textContent.toLowerCase();
+
+    if (pokemonIdentity.includes(searchTerm) || pokemonType.includes(searchTerm)) {
+      pokemonCard.style.display = 'flex';
+    } else {
+      pokemonCard.style.display = 'none';
+    }
+  });
+}
+
+// Chargement du pokedex sur la page d'accueil
 loadPokedex();
 
-// Gérez le clic sur le bouton "Charger plus"
-const loadMoreButton = document.getElementById("load-more-button");
-loadMoreButton.addEventListener("click", loadMorePokemon);
+// Ecouteur d'évenement sur l'input de la barre de recherche
+searchInput.addEventListener('input', handleSearch);
+
 
 
