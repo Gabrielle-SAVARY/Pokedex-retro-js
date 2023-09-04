@@ -1,0 +1,1059 @@
+[
+    {
+      "index": "001",
+      "name": "Bulbizarre",
+      "type": "Plante-Poison",
+      "description": "C'est un des starters dans la région Kanto, avec Salamèche et Carapuce.",
+      "image": "./img/001.png"
+    },
+    {
+      "index": "002",
+      "name": "Herbizarre",
+      "type": "Plante-Poison",
+      "description": "Première évolution de Bulbizarre.",
+      "image": "./img/002.png"
+    },
+    {
+      "index": "003",
+      "name": "Florizarre",
+      "type": "Plante-Poison",
+      "description": "Dernière évolution de Bulbizarre.",
+      "image": "./img/003.png"
+    },
+    {
+      "index": "004",
+      "name": "Salamèche",
+      "type": "Feu",
+      "description": "C'est un des starters de la région Kanto, avec Bulbizarre et Carapuce.",
+      "image": "./img/004.png"
+    },
+    {
+      "index": "005",
+      "name": "Reptincel",
+      "type": "Feu",
+      "description": "Première évolution de Salamèche.",
+      "image": "./img/005.png"
+    },
+    {
+      "index": "006",
+      "name": "Dracaufeu",
+      "type": "Feu-Vol",
+      "description": "Dernière évolution de Salamèche.",
+      "image": "./img/006.png"
+    },
+    {
+      "index": "007",
+      "name": "Carapuce",
+      "type": "Eau",
+      "description": "C'est un des starters de Kanto, avec Salamèche et Bulbizarre.",
+      "image": "./img/007.png"
+    },
+    {
+      "index": "008",
+      "name": "Carabaffe",
+      "type": "Eau",
+      "description": "Première évolution de Carapuce.",
+      "image": "./img/008.png"
+    },
+    {
+      "index": "009",
+      "name": "Tortank",
+      "type": "Eau",
+      "description": "Dernière évolution de Carapuce.",
+      "image": "./img/009.png"
+    },
+    {
+      "index": "010",
+      "name": "Chenipan",
+      "type": "Insecte",
+      "description": null,
+      "image": "./img/010.png"
+    },
+    {
+      "index": "011",
+      "name": "Chrysacier",
+      "type": "Insecte",
+      "description": "Première évolution de Chenipan.",
+      "image": "./img/011.png"
+    },
+    {
+      "index": "012",
+      "name": "Papilusion",
+      "type": "Insecte-Vol",
+      "description": "Dernière évolution de Chenipan.",
+      "image": "./img/012.png"
+    },
+    {
+      "index": "013",
+      "name": "Aspicot",
+      "type": "Insecte-Poison",
+      "description": null,
+      "image": "./img/013.png"
+    },
+    {
+      "index": "014",
+      "name": "Coconfort",
+      "type": "Insecte-Poison",
+      "description": "Première évolution d'Aspicot.",
+      "image": "./img/014.png"
+    },
+    {
+      "index": "015",
+      "name": "Dardargnan",
+      "type": "Insecte-Poison",
+      "description": "Dernière évolution d'Aspicot.",
+      "image": "./img/015.png"
+    },
+    {
+      "index": "016",
+      "name": "Roucool",
+      "type": "Normal-Vol",
+      "description": null,
+      "image": "./img/016.png"
+    },
+    {
+      "index": "017",
+      "name": "Roucoups",
+      "type": "Normal-Vol",
+      "description": "Première évolution de Roucool.",
+      "image": "./img/017.png"
+    },
+    {
+      "index": "018",
+      "name": "Roucarnage",
+      "type": "Normal-Vol",
+      "description": "Dernière évolution de Roucool.",
+      "image": "./img/018.png"
+    },
+    {
+      "index": "019",
+      "name": "Rattata",
+      "type": "Normal",
+      "description": null,
+      "image": "./img/019.png"
+    },
+    {
+      "index": "020",
+      "name": "Rattatac",
+      "type": "Normal",
+      "description": "Évolution de Rattata.",
+      "image": "./img/020.png"
+    },
+    {
+      "index": "021",
+      "name": "Piafabec",
+      "type": "Normal-Vol",
+      "description": null,
+      "image": "./img/021.png"
+    },
+    {
+      "index": "022",
+      "name": "Rapasdepic",
+      "type": "Normal-Vol",
+      "description": "Évolution de Rapasdepic.",
+      "image": "./img/022.png"
+    },
+    {
+      "index": "023",
+      "name": "Abo",
+      "type": "Poison",
+      "description": null,
+      "image": "./img/023.png"
+    },
+    {
+      "index": "024",
+      "name": "Arbok",
+      "type": "Poison",
+      "description": "Évolution d'Abo.",
+      "image": "./img/024.png"
+    },
+    {
+      "index": "025",
+      "name": "Pikachu",
+      "type": "Électrique",
+      "description": "Le Pokémon le plus connu à cause de son implication dans le dessin animé",
+      "image": "./img/025.png"
+    },
+    {
+      "index": "026",
+      "name": "Raichu",
+      "type": "Électrique",
+      "description": "Évolution de Pikachu.",
+      "image": "./img/026.png"
+    },
+    {
+      "index": "027",
+      "name": "Sabelette",
+      "type": "Sol",
+      "description": null,
+      "image": "./img/027.png"
+    },
+    {
+      "index": "028",
+      "name": "Sablaireau",
+      "type": "Sol",
+      "description": "Évolution de Sabelette.",
+      "image": "./img/028.png"
+    },
+    {
+      "index": "029",
+      "name": "Nidoran♀",
+      "type": "Poison",
+      "description": "Malgré sa ressemblance avec son alter ego Nidoran♂, ces deux Pokémon sont de deux espèces différentes selon le Pokédex.",
+      "image": "./img/029.png"
+    },
+    {
+      "index": "030",
+      "name": "Nidorina",
+      "type": "Poison",
+      "description": "Première évolution de Nidoran♀.",
+      "image": "./img/030.png"
+    },
+    {
+      "index": "031",
+      "name": "Nidoqueen",
+      "type": "Poison-Terre",
+      "description": "Dernière évolution de Nidoran♀.",
+      "image": "./img/031.png"
+    },
+    {
+      "index": "032",
+      "name": "Nidoran♂",
+      "type": "Poison",
+      "description": "Malgré sa ressemblance avec son alter ego Nidoran♀, ces deux Pokémon sont de deux espèces différentes selon le Pokédex.",
+      "image": "./img/032.png"
+    },
+    {
+      "index": "033",
+      "name": "Nidorino",
+      "type": "Poison",
+      "description": "Première évolution de Nidoran♂.",
+      "image": "./img/033.png"
+    },
+    {
+      "index": "034",
+      "name": "Nidoking",
+      "type": "Poison-Terre",
+      "description": "Dernière évolution de Nidoran♂.",
+      "image": "./img/034.png"
+    },
+    {
+      "index": "035",
+      "name": "Mélofée",
+      "type": "Fée",
+      "description": null,
+      "image": "./img/035.png"
+    },
+    {
+      "index": "036",
+      "name": "Mélodelfe",
+      "type": "Fée",
+      "description": "Évolution de Mélofée.",
+      "image": "./img/036.png"
+    },
+    {
+      "index": "037",
+      "name": "Goupix",
+      "type": "Feu",
+      "description": "Ce Pokémon a la particularité d'avoir plusieurs évolutions possibles en fonction de sa localisation géographique.",
+      "image": "./img/037.png"
+    },
+    {
+      "index": "038",
+      "name": "Feunard",
+      "type": "Feu",
+      "description": "Évolution de Goupix.",
+      "image": "./img/038.png"
+    },
+    {
+      "index": "039",
+      "name": "Rondoudou",
+      "type": "Normal-Fée",
+      "description": null,
+      "image": "./img/039.png"
+    },
+    {
+      "index": "040",
+      "name": "Grodoudou",
+      "type": "Normal-Fée",
+      "description": "Évolution de Rondoudou.",
+      "image": "./img/040.png"
+    },
+    {
+      "index": "041",
+      "name": "Nosferapti",
+      "type": "Poison-Vol",
+      "description": null,
+      "image": "./img/041.png"
+    },
+    {
+      "index": "042",
+      "name": "Nosferalto",
+      "type": "Poison-Vol",
+      "description": "Évolution de Nosferapti.",
+      "image": "./img/042.png"
+    },
+    {
+      "index": "043",
+      "name": "Mystherbe",
+      "type": "Plante-Poison",
+      "description": null,
+      "image": "./img/043.png"
+    },
+    {
+      "index": "044",
+      "name": "Ortide",
+      "type": "Plante-Poison",
+      "description": "Évolution de Mystherbe.",
+      "image": "./img/044.png"
+    },
+    {
+      "index": "045",
+      "name": "Rafflesia",
+      "type": "Plante-Poison",
+      "description": "Dernière évolution d'Ortide.",
+      "image": "./img/045.png"
+    },
+    {
+      "index": "046",
+      "name": "Paras",
+      "type": "Insecte-Plante",
+      "description": null,
+      "image": "./img/046.png"
+    },
+    {
+      "index": "047",
+      "name": "Parasect",
+      "type": "Insecte-Plante",
+      "description": "Évolution de Paras.",
+      "image": "./img/047.png"
+    },
+    {
+      "index": "048",
+      "name": "Mimitoss",
+      "type": "Insecte-Poison",
+      "description": null,
+      "image": "./img/048.png"
+    },
+    {
+      "index": "049",
+      "name": "Aéromite",
+      "type": "Insecte-Poison",
+      "description": "Évolution de Mimitoss.",
+      "image": "./img/049.png"
+    },
+    {
+      "index": "050",
+      "name": "Taupiqueur",
+      "type": "Sol",
+      "description": null,
+      "image": "./img/050.png"
+    },
+    {
+      "index": "051",
+      "name": "Triopikeur",
+      "type": "Sol",
+      "description": "Évolution de Taupiqueur.",
+      "image": "./img/051.png"
+    },
+    {
+      "index": "052",
+      "name": "Miaouss",
+      "type": "Normal",
+      "description": "Ce Pokémon est associé à l'équipe de méchants appelée la Team Rocket dans le dessin animé Pokémon.",
+      "image": "./img/052.png"
+    },
+    {
+      "index": "053",
+      "name": "Persian",
+      "type": "Normal",
+      "description": "Évolution de Miaouss.",
+      "image": "./img/053.png"
+    },
+    {
+      "index": "054",
+      "name": "Psykokwak",
+      "type": "Eau",
+      "description": null,
+      "image": "./img/054.png"
+    },
+    {
+      "index": "055",
+      "name": "Akwakwak",
+      "type": "Eau",
+      "description": "Évolution de Psykokwak.",
+      "image": "./img/055.png"
+    },
+    {
+      "index": "056",
+      "name": "Férosinge",
+      "type": "Combat",
+      "description": null,
+      "image": "./img/056.png"
+    },
+    {
+      "index": "057",
+      "name": "Colossinge",
+      "type": "Combat",
+      "description": "Évolution de Férosinge.",
+      "image": "./img/057.png"
+    },
+    {
+      "index": "058",
+      "name": "Caninos",
+      "type": "Feu",
+      "description": null,
+      "image": "./img/058.png"
+    },
+    {
+      "index": "059",
+      "name": "Arcanin",
+      "type": "Feu",
+      "description": "Évolution de Caninos.",
+      "image": "./img/059.png"
+    },
+    {
+      "index": "060",
+      "name": "Ptitard",
+      "type": "Eau",
+      "description": null,
+      "image": "./img/060.png"
+    },
+    {
+      "index": "061",
+      "name": "Têtarte",
+      "type": "Eau",
+      "description": "Évolution de Ptitard.",
+      "image": "./img/061.png"
+    },
+    {
+      "index": "062",
+      "name": "Tartard",
+      "type": "Eau",
+      "description": "Dernière évolution de Ptitard.",
+      "image": "./img/062.png"
+    },
+    {
+      "index": "063",
+      "name": "Abra",
+      "type": "Psy",
+      "description": null,
+      "image": "./img/063.png"
+    },
+    {
+      "index": "064",
+      "name": "Kadabra",
+      "type": "Psy",
+      "description": "Évolution d'Abra.",
+      "image": "./img/064.png"
+    },
+    {
+      "index": "065",
+      "name": "Alakazam",
+      "type": "Psy",
+      "description": "Dernière évolution d'Abra.",
+      "image": "./img/065.png"
+    },
+    {
+      "index": "066",
+      "name": "Machoc",
+      "type": "Combat",
+      "description": null,
+      "image": "./img/066.png"
+    },
+    {
+      "index": "067",
+      "name": "Machopeur",
+      "type": "Combat",
+      "description": "Évolution de Machoc.",
+      "image": "./img/067.png"
+    },
+    {
+      "index": "068",
+      "name": "Mackogneur",
+      "type": "Combat",
+      "description": "Dernière évolution de Machoc.",
+      "image": "./img/068.png"
+    },
+    {
+      "index": "069",
+      "name": "Chétiflor",
+      "type": "Plante-Poison",
+      "description": null,
+      "image": "./img/069.png"
+    },
+    {
+      "index": "070",
+      "name": "Boustiflor",
+      "type": "Plante-Poison",
+      "description": "Évolution de Chétiflor.",
+      "image": "./img/070.png"
+    },
+    {
+      "index": "071",
+      "name": "Empiflor",
+      "type": "Plante-Poison",
+      "description": "Dernière évolution de Chétiflor.",
+      "image": "./img/071.png"
+    },
+    {
+      "index": "072",
+      "name": "Tentacool",
+      "type": "Eau-Poison",
+      "description": null,
+      "image": "./img/072.png"
+    },
+    {
+      "index": "073",
+      "name": "Tentacruel",
+      "type": "Eau-Poison",
+      "description": "Évolution de Tentacool.",
+      "image": "./img/073.png"
+    },
+    {
+      "index": "074",
+      "name": "Racaillou",
+      "type": "Roche-Sol",
+      "description": null,
+      "image": "./img/074.png"
+    },
+    {
+      "index": "075",
+      "name": "Gravalanch",
+      "type": "Roche-Sol",
+      "description": "Évolution de Racaillou.",
+      "image": "./img/075.png"
+    },
+    {
+      "index": "076",
+      "name": "Grolem",
+      "type": "Roche-Sol",
+      "description": "Dernière évolution de Racaillou.",
+      "image": "./img/076.png"
+    },
+    {
+      "index": "077",
+      "name": "Ponyta",
+      "type": "Feu",
+      "description": "Ce Pokémon est connu pour sa crinière en feu.",
+      "image": "./img/077.png"
+    },
+    {
+      "index": "078",
+      "name": "Galopa",
+      "type": "Feu",
+      "description": "Évolution de Ponyta.",
+      "image": "./img/078.png"
+    },
+    {
+      "index": "079",
+      "name": "Ramoloss",
+      "type": "Eau",
+      "description": null,
+      "image": "./img/079.png"
+    },
+    {
+      "index": "080",
+      "name": "Flagadoss",
+      "type": "Eau-Psy",
+      "description": "Évolution de Ramoloss.",
+      "image": "./img/080.png"
+    },
+    {
+      "index": "081",
+      "name": "Magnéti",
+      "type": "Électrique-Acier",
+      "description": null,
+      "image": "./img/081.png"
+    },
+    {
+      "index": "082",
+      "name": "Magnéton",
+      "type": "Électrique-Acier",
+      "description": "Évolution de Magnéti.",
+      "image": "./img/082.png"
+    },
+    {
+      "index": "083",
+      "name": "Canarticho",
+      "type": "Normal-Vol",
+      "description": null,
+      "image": "./img/083.png"
+    },
+    {
+      "index": "084",
+      "name": "Doduo",
+      "type": "Normal-Vol",
+      "description": null,
+      "image": "./img/084.png"
+    },
+    {
+      "index": "085",
+      "name": "Dodrio",
+      "type": "Normal-Vol",
+      "description": "Évolution de Doduo.",
+      "image": "./img/085.png"
+    },
+    {
+      "index": "086",
+      "name": "Otaria",
+      "type": "Eau",
+      "description": null,
+      "image": "./img/086.png"
+    },
+    {
+      "index": "087",
+      "name": "Lamantine",
+      "type": "Eau-Glace",
+      "description": "Évolution d'Otaria.",
+      "image": "./img/087.png"
+    },
+    {
+      "index": "088",
+      "name": "Tadmorv",
+      "type": "Poison",
+      "description": null,
+      "image": "./img/088.png"
+    },
+    {
+      "index": "089",
+      "name": "Grotadmorv",
+      "type": "Poison",
+      "description": "Évolution de Tadmorv.",
+      "image": "./img/089.png"
+    },
+    {
+      "index": "090",
+      "name": "Kokiyas",
+      "type": "Eau",
+      "description": null,
+      "image": "./img/090.png"
+    },
+    {
+      "index": "091",
+      "name": "Crustabri",
+      "type": "Eau-Glace",
+      "description": "Évolution de Kokiyas.",
+      "image": "./img/091.png"
+    },
+    {
+      "index": "092",
+      "name": "Fantominus",
+      "type": "Spectre-Poison",
+      "description": null,
+      "image": "./img/092.png"
+    },
+    {
+      "index": "093",
+      "name": "Spectrum",
+      "type": "Spectre-Poison",
+      "description": "Évolution de Fantominus.",
+      "image": "./img/093.png"
+    },
+    {
+      "index": "094",
+      "name": "Ectoplasma",
+      "type": "Spectre-Poison",
+      "description": "Dernière évolution de Fantominus.",
+      "image": "./img/094.png"
+    },
+    {
+      "index": "095",
+      "name": "Onix",
+      "type": "Roche-Sol",
+      "description": "Ce Pokémon est impressionnant par sa taille et sa puissance.",
+      "image": "./img/095.png"
+    },
+    {
+      "index": "096",
+      "name": "Soporifik",
+      "type": "Psy",
+      "description": null,
+      "image": "./img/096.png"
+    },
+    {
+      "index": "097",
+      "name": "Hypnomade",
+      "type": "Psy",
+      "description": "Évolution de Soporifik.",
+      "image": "./img/097.png"
+    },
+    {
+      "index": "098",
+      "name": "Krabby",
+      "type": "Eau",
+      "description": null,
+      "image": "./img/098.png"
+    },
+    {
+      "index": "099",
+      "name": "Krabboss",
+      "type": "Eau",
+      "description": "Évolution de Krabby.",
+      "image": "./img/099.png"
+    },
+    {
+      "index": "100",
+      "name": "Voltorbe",
+      "type": "Électrique",
+      "description": null,
+      "image": "./img/100.png"
+    },
+    {
+      "index": "101",
+      "name": "Électrode",
+      "type": "Électrique",
+      "description": "Évolution de Voltorbe.",
+      "image": "./img/101.png"
+    },
+    {
+      "index": "102",
+      "name": "Noeunoeuf",
+      "type": "Plante",
+      "description": "Ce Pokémon est composé de plusieurs œufs.",
+      "image": "./img/102.png"
+    },
+    {
+      "index": "103",
+      "name": "Noadkoko",
+      "type": "Plante",
+      "description": "Dernière évolution de Noeunoeuf.",
+      "image": "./img/103.png"
+    },
+    {
+      "index": "104",
+      "name": "Osselait",
+      "type": "Sol",
+      "description": "Ce Pokémon porte l'os de sa mère.",
+      "image": "./img/104.png"
+    },
+    {
+      "index": "105",
+      "name": "Ossatueur",
+      "type": "Sol",
+      "description": "Dernière évolution d'Osselait.",
+      "image": "./img/105.png"
+    },
+    {
+      "index": "106",
+      "name": "Kicklee",
+      "type": "Combat",
+      "description": null,
+      "image": "./img/106.png"
+    },
+    {
+      "index": "107",
+      "name": "Tygnon",
+      "type": "Combat",
+      "description": "Évolution de Kicklee.",
+      "image": "./img/107.png"
+    },
+    {
+      "index": "108",
+      "name": "Excelangue",
+      "type": "Normal",
+      "description": null,
+      "image": "./img/108.png"
+    },
+    {
+      "index": "109",
+      "name": "Smogo",
+      "type": "Poison",
+      "description": null,
+      "image": "./img/109.png"
+    },
+    {
+      "index": "110",
+      "name": "Smogogo",
+      "type": "Poison",
+      "description": "Évolution de Smogo.",
+      "image": "./img/110.png"
+    },
+    {
+      "index": "111",
+      "name": "Rhinocorne",
+      "type": "Sol-Roche",
+      "description": null,
+      "image": "./img/111.png"
+    },
+    {
+      "index": "112",
+      "name": "Rhinoféros",
+      "type": "Sol-Roche",
+      "description": "Évolution de Rhinocorne.",
+      "image": "./img/112.png"
+    },
+    {
+      "index": "113",
+      "name": "Leveinard",
+      "type": "Normal",
+      "description": null,
+      "image": "./img/113.png"
+    },
+    {
+      "index": "114",
+      "name": "Saquedeneu",
+      "type": "Plante",
+      "description": "Ce Pokémon est basé sur une plante carnivore.",
+      "image": "./img/114.png"
+    },
+    {
+      "index": "115",
+      "name": "Kangourex",
+      "type": "Normal",
+      "description": null,
+      "image": "./img/115.png"
+    },
+    {
+      "index": "116",
+      "name": "Hypotrempe",
+      "type": "Eau-Dragon",
+      "description": null,
+      "image": "./img/116.png"
+    },
+    {
+      "index": "117",
+      "name": "Hypocéan",
+      "type": "Eau-Dragon",
+      "description": "Évolution d'Hypotrempe.",
+      "image": "./img/117.png"
+    },
+    {
+      "index": "118",
+      "name": "Poissirène",
+      "type": "Eau",
+      "description": null,
+      "image": "./img/118.png"
+    },
+    {
+      "index": "119",
+      "name": "Poissoroy",
+      "type": "Eau",
+      "description": "Évolution de Poissirène.",
+      "image": "./img/119.png"
+    },
+    {
+      "index": "120",
+      "name": "Stari",
+      "type": "Eau",
+      "description": null,
+      "image": "./img/120.png"
+    },
+    {
+      "index": "121",
+      "name": "Staross",
+      "type": "Eau-Psy",
+      "description": "Évolution de Stari.",
+      "image": "./img/121.png"
+    },
+    {
+      "index": "122",
+      "name": "M. Mime",
+      "type": "Psy-Fée",
+      "description": "Ce Pokémon est connu pour ses talents de mime.",
+      "image": "./img/122.png"
+    },
+    {
+      "index": "123",
+      "name": "Insécateur",
+      "type": "Insecte-Vol",
+      "description": null,
+      "image": "./img/123.png"
+    },
+    {
+      "index": "124",
+      "name": "Lippoutou",
+      "type": "Glace-Psy",
+      "description": "Évolution de Rondoudou lorsque celui-ci est exposé à une Pierre Lune.",
+      "image": "./img/124.png"
+    },
+    {
+      "index": "125",
+      "name": "Élektek",
+      "type": "Électrique",
+      "description": "Évolution d'Élektek lorsqu'il est échangé avec un objet spécifique.",
+      "image": "./img/125.png"
+    },
+    {
+      "index": "126",
+      "name": "Magmar",
+      "type": "Feu",
+      "description": "Évolution de Magmar lorsqu'il est échangé avec un objet spécifique.",
+      "image": "./img/126.png"
+    },
+    {
+      "index": "127",
+      "name": "Scarabrute",
+      "type": "Insecte",
+      "description": null,
+      "image": "./img/127.png"
+    },
+    {
+      "index": "128",
+      "name": "Tauros",
+      "type": "Normal",
+      "description": null,
+      "image": "./img/128.png"
+    },
+    {
+      "index": "129",
+      "name": "Magicarpe",
+      "type": "Eau",
+      "description": "Connu pour être l'un des Pokémon les plus faibles, Magicarpe peut évoluer en un puissant Léviator.",
+      "image": "./img/129.png"
+    },
+    {
+      "index": "130",
+      "name": "Léviator",
+      "type": "Eau-Vol",
+      "description": "Dernière évolution de Magicarpe.",
+      "image": "./img/130.png"
+    },
+    {
+      "index": "131",
+      "name": "Lokhlass",
+      "type": "Eau-Glace",
+      "description": null,
+      "image": "./img/131.png"
+    },
+    {
+      "index": "132",
+      "name": "Métamorph",
+      "type": "Normal",
+      "description": "Ce Pokémon a la capacité unique de se transformer en n'importe quel autre Pokémon.",
+      "image": "./img/132.png"
+    },
+    {
+      "index": "133",
+      "name": "Évoli",
+      "type": "Normal",
+      "description": "Évoli a plusieurs évolutions possibles en fonction des conditions.",
+      "image": "./img/133.png"
+    },
+    {
+      "index": "134",
+      "name": "Aquali",
+      "type": "Eau",
+      "description": "Évolution d'Évoli lorsque celui-ci est exposé à une Pierre Eau.",
+      "image": "./img/134.png"
+    },
+    {
+      "index": "135",
+      "name": "Voltali",
+      "type": "Électrique",
+      "description": "Évolution d'Évoli lorsque celui-ci est exposé à une Pierre Foudre.",
+      "image": "./img/135.png"
+    },
+    {
+      "index": "136",
+      "name": "Pyroli",
+      "type": "Feu",
+      "description": "Évolution d'Évoli lorsque celui-ci est exposé à une Pierre Feu.",
+      "image": "./img/136.png"
+    },
+    {
+      "index": "137",
+      "name": "Porygon",
+      "type": "Normal",
+      "description": "Porygon est un Pokémon artificiel créé par des humains.",
+      "image": "./img/137.png"
+    },
+    {
+      "index": "138",
+      "name": "Amonita",
+      "type": "Roche-Eau",
+      "description": null,
+      "image": "./img/138.png"
+    },
+    {
+      "index": "139",
+      "name": "Amonistar",
+      "type": "Roche-Eau",
+      "description": "Évolution d'Amonita.",
+      "image": "./img/139.png"
+    },
+    {
+      "index": "140",
+      "name": "Kabuto",
+      "type": "Roche-Eau",
+      "description": null,
+      "image": "./img/140.png"
+    },
+    {
+      "index": "141",
+      "name": "Kabutops",
+      "type": "Roche-Eau",
+      "description": "Évolution de Kabuto.",
+      "image": "./img/141.png"
+    },
+    {
+      "index": "142",
+      "name": "Ptéra",
+      "type": "Roche-Vol",
+      "description": "Ce Pokémon est connu pour être un ancien Pokémon volant.",
+      "image": "./img/142.png"
+    },
+    {
+      "index": "143",
+      "name": "Ronflex",
+      "type": "Normal",
+      "description": null,
+      "image": "./img/143.png"
+    },
+    {
+      "index": "144",
+      "name": "Artikodin",
+      "type": "Glace-Vol",
+      "description": null,
+      "image": "./img/144.png"
+    },
+    {
+      "index": "145",
+      "name": "Électhor",
+      "type": "Électrique-Vol",
+      "description": null,
+      "image": "./img/145.png"
+    },
+    {
+      "index": "146",
+      "name": "Sulfura",
+      "type": "Feu-Vol",
+      "description": null,
+      "image": "./img/146.png"
+    },
+    {
+      "index": "147",
+      "name": "Minidraco",
+      "type": "Dragon",
+      "description": null,
+      "image": "./img/147.png"
+    },
+    {
+      "index": "148",
+      "name": "Draco",
+      "type": "Dragon",
+      "description": "Évolution de Minidraco.",
+      "image": "./img/148.png"
+    },
+    {
+      "index": "149",
+      "name": "Dracolosse",
+      "type": "Dragon-Vol",
+      "description": "Dernière évolution de Minidraco.",
+      "image": "./img/149.png"
+    },
+    {
+      "index": "150",
+      "name": "Mewtwo",
+      "type": "Psy",
+      "description": "Mewtwo est l'un des Pokémon légendaires et est réputé pour sa puissance psychique.",
+      "image": "./img/150.png"
+    },
+    {
+      "index": "151",
+      "name": "Mew",
+      "type": "Psy",
+      "description": "Mew est également un Pokémon légendaire et est considéré comme le Pokémon originel.",
+      "image": "./img/151.png"
+    }
+  ]
