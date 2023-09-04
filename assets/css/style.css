@@ -35,6 +35,10 @@ h1 {
 
 main{
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
 }
 
 #load-more-button {
@@ -51,6 +55,50 @@ main{
     color: #fff; 
     transition: ease 0.3s all;
   }
+
+  #pokemon-list{
+    /* height: 80%;
+    width: 80%; */
+    display: flex;
+    flex-flow: row wrap;  
+    align-items: center;
+    justify-content: center;   
+  }
+  
+  /* Style pour les éléments résultants (cartes Pokémon par exemple) */
+  .pokemon-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 250px;
+    background-color: #982c2c;
+    font-size: 1rem;
+    color:#fff;
+    border-radius: 10px;
+    margin: 1rem;
+   
+    /* Styles pour chaque carte Pokemon, comme la couleur de fond, la bordure, etc. */
+    /* Ajoutez ici les styles pour afficher les cartes Pokémon */
+  }
+  
+  .pokemon-img {
+    height: 70%;
+    width: 60%;    
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem
+
+}
+.pokemon-infos {
+    height: 30%;
+    width: 100%;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
   footer{
     height: 5%;
