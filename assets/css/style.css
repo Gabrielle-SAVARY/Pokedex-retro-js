@@ -66,7 +66,34 @@ h1 {
   .search-button:hover {
     background-color: #982c2c; /* Couleur de fond du bouton au survol */
   }
-  
+  /*FILTRE TYPES POKEMONS*/
+	.types-list{
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin: 1rem;
+	}
+  /*Bouton filtre type pokemon*/
+.type-filter-button {
+	border: none; 
+	padding: 8px 20px; 
+	cursor: pointer; 
+	border-radius: 5px; 
+	color: #fff;
+	font-weight: 500;
+  transition: transform 0.2s;
+	margin: 0.3rem;
+	width: 100%;
+}
+
+/* Style pour les boutons de filtre actifs */
+.type-filter-button.active {
+	font-weight: bold;
+  transform: scale(1.1); 
+}
+
 
 main{
     flex-grow: 1;
@@ -76,7 +103,7 @@ main{
     justify-content: center;    
 }
 
-/* #load-more-button {
+#load-more-button {
     background-color: #fff; 
     color: black; 
     border: none; 
@@ -89,7 +116,7 @@ main{
     background-color: black; 
     color: #fff; 
     transition: ease 0.3s all;
-  } */
+  }
 
 	/* LISTE POKEMON */
   #pokemon-list{
@@ -150,4 +177,15 @@ main{
 	#pokemon-list{
 		flex-flow: row wrap;  
 	}
+	.types-list{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+	}
+	.type-filter-button {
+		width: auto;
+	}
+	.type-filter-button.active {
+  transform: scale(1.15); 
+}
 }

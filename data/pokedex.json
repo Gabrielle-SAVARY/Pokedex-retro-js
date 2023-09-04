@@ -170,14 +170,14 @@
     {
       "index": "025",
       "name": "Pikachu",
-      "type": "Électrique",
+      "type": "Électrik",
       "description": "Le Pokémon le plus connu à cause de son implication dans le dessin animé",
       "image": "../assets/img/025.png"
     },
     {
       "index": "026",
       "name": "Raichu",
-      "type": "Électrique",
+      "type": "Électrik",
       "description": "Évolution de Pikachu.",
       "image": "../assets/img/026.png"
     },
@@ -562,14 +562,14 @@
     {
       "index": "081",
       "name": "Magnéti",
-      "type": "Électrique-Acier",
+      "type": "Électrik-Acier",
       "description": null,
       "image": "../assets/img/081.png"
     },
     {
       "index": "082",
       "name": "Magnéton",
-      "type": "Électrique-Acier",
+      "type": "Électrik-Acier",
       "description": "Évolution de Magnéti.",
       "image": "../assets/img/082.png"
     },
@@ -695,14 +695,14 @@
     {
       "index": "100",
       "name": "Voltorbe",
-      "type": "Électrique",
+      "type": "Électrik",
       "description": null,
       "image": "../assets/img/100.png"
     },
     {
       "index": "101",
       "name": "Électrode",
-      "type": "Électrique",
+      "type": "Électrik",
       "description": "Évolution de Voltorbe.",
       "image": "../assets/img/101.png"
     },
@@ -870,7 +870,7 @@
     {
       "index": "125",
       "name": "Élektek",
-      "type": "Électrique",
+      "type": "Électrik",
       "description": "Évolution d'Élektek lorsqu'il est échangé avec un objet spécifique.",
       "image": "../assets/img/125.png"
     },
@@ -940,7 +940,7 @@
     {
       "index": "135",
       "name": "Voltali",
-      "type": "Électrique",
+      "type": "Électrik",
       "description": "Évolution d'Évoli lorsque celui-ci est exposé à une Pierre Foudre.",
       "image": "../assets/img/135.png"
     },
@@ -1010,7 +1010,7 @@
     {
       "index": "145",
       "name": "Électhor",
-      "type": "Électrique-Vol",
+      "type": "Électrik-Vol",
       "description": null,
       "image": "../assets/img/145.png"
     },
