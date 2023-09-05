@@ -1,10 +1,8 @@
 let pokedex = [];
 let pokemonsTypes = [];
-let currentPage = 1;
 const pokedexEnd = 151;
-const pokemonPerPage = 20;
-// Barre de recherche
-const searchInput = document.getElementById('search-input');
+
+
 
 // Chargement du fichier JSON du pokedex
 async function getPokedex() {
@@ -31,7 +29,7 @@ async function getPokemonsTypes() {
 function displayPokemon(pokemonList) {
 	console.log('pokemonList', pokemonList);
 	// Récupérez le conteneur principal où vous voulez afficher les cartes Pokémon
-	const pokemonsList = document.getElementById('pokemon-list');
+	const pokemonsList = document.getElementById('pokemons-list');
 
 	// Boucle sur les pokemons du pokedex
 	for (let i = 0; i < pokedexEnd; i++) {
@@ -94,7 +92,7 @@ function filterPokemonByType(type) {
 
 // Créer les boutons de filtre de type de Pokémon
 function createTypeFilterButtons(types) {
-	const typesList = document.querySelector('.types-list');
+	const filtersContainer = document.querySelector('.types-list__filters-container');
 
 	types.forEach(type => {
 		const button = document.createElement('button');
@@ -105,16 +103,16 @@ function createTypeFilterButtons(types) {
 		// Ajoute un écouteur d'événement pour le clic sur le bouton
 		button.addEventListener('click', function () {
 			// Supprimez la classe active de tous les boutons
-      document.querySelectorAll('.type-filter-button').forEach(btn => {
-        btn.classList.remove('active');
-      });
+			document.querySelectorAll('.type-filter-button').forEach(btn => {
+				btn.classList.remove('active');
+			});
 
-      // Ajoutez la classe active au bouton actuellement sélectionné
-      button.classList.add('active');
+			// Ajoutez la classe active au bouton actuellement sélectionné
+			button.classList.add('active');
 			filterPokemonByType(type.typeName);
 		});
 		// Ajoute le bouton au conteneur des boutons de filtre
-		typesList.appendChild(button);
+		filtersContainer.appendChild(button);
 	});
 }
 
@@ -146,13 +144,38 @@ function handleSearch() {
 	});
 }
 
+// Affiche tous les Pokémon
+function showAllPokemon() {
+	const pokemonCards = document.querySelectorAll('.pokemon-card');
+	pokemonCards.forEach(pokemonCard => {
+		pokemonCard.style.display = 'flex';
+	});
+}
+
+function resetFilter() {
+	// Affiche tous les Pokémon
+	showAllPokemon();
+	// Supprime la classe active de tous les boutons
+	document.querySelectorAll('.type-filter-button').forEach(btn => {
+		btn.classList.remove('active');
+	});
+
+}
+
+function resetSearchBar() {
+	// Réinitialise la barre de recherche
+	searchInput.value = '';
+	// Affiche tous les Pokémon
+	showAllPokemon();
+}
+
 // Chargement du pokedex sur la page d'accueil
 loadPokedex();
 
+// Barre de recherche
+const searchInput = document.getElementById('search-input');
 // Ecouteur d'évenement sur l'input de la barre de recherche
 searchInput.addEventListener('input', handleSearch);
-
-
 
 
 // Sélection du bouton de réinitialisation des filtres de type
@@ -164,17 +187,17 @@ resetFilterButton.addEventListener('click', function () {
 	resetFilter();
 });
 
-function resetFilter() {
-	const pokemonCards = document.querySelectorAll('.pokemon-card');
-	// Affiche tous les Pokémon
-	pokemonCards.forEach(pokemonCard => {
-		pokemonCard.style.display = 'flex';
-	});
-	// Supprime la classe active de tous les boutons
-	document.querySelectorAll('.type-filter-button').forEach(btn => {
-		btn.classList.remove('active');
-	});
-}
+
+
+
+// Sélection du bouton de réinitialisation des filtres de type
+const resetSearchButton = document.getElementById('reset-search-button');
+
+// Ajoutez un gestionnaire d'événement pour le clic sur le bouton de réinitialisation
+resetSearchButton.addEventListener('click', function () {
+	// Appelez une fonction pour réinitialiser le filtre
+	resetSearchBar();
+});
 
 
 
