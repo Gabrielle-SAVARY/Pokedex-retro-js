@@ -156,23 +156,23 @@ h1 {
   color: black;
 }
 
-
 main {
   flex-grow: 1;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row wrap;
+  align-items: flex-start;
   justify-content: center;
+  width: 100%;
 }
 
-/* LISTE POKEMON */
+/* LISTE POKEMONS */
 #pokemons-list {
-  /* height: 80%;
-    width: 80%; */
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1rem;
+  width: 100%;
 }
 
 /* Carte pokemon*/
@@ -185,7 +185,7 @@ main {
   width: 180px;
   background-color: #982c2c;
   border-radius: 10px;
-  margin: 1rem 1.2rem 1.2rem 1rem;
+  margin: 0.5rem 1.2rem 0.5rem 1.2rem;
 }
 
 .pokemon-img {
@@ -207,25 +207,37 @@ main {
   justify-content: center;
   font-family: 'Bree Serif', serif;
 }
-.pokemon-identification{
+
+.pokemon-identification {
   font-size: 1rem;
   color: #fff;
 }
 
-.pokemon-type{
+.pokemon-type {
   padding-top: 0.2rem;
   font-size: 0.8rem;
   color: #F5E4E5;
 }
 
 footer {
-  height: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 5rem;
+  width: 100%;
+  background-color: #383E42;
+  font-family: 'Bree Serif', serif;
   font-size: 0.8rem;
-  margin: 0.5rem;
-  text-align: center;
 }
 
-/* Responsive: Media queries desktop*/
+footer a {
+  color: #C14040;
+  text-decoration: none;
+}
+
+/* Responsive: Media queries tablette */
 @media screen and (min-width: 768px) {
   .search-bar {
     width: 80%;
@@ -252,6 +264,7 @@ footer {
     justify-content: flex-start;
     width: 80%;
   }
+
   .types-list__header {
     margin-left: 2.5rem;
   }
@@ -260,19 +273,25 @@ footer {
     margin: 0.4rem;
   }
 
+  #pokemons-list {
+    width: 90%;
+    margin-top: 1rem;
+  }
+
   .pokemon-card {
     height: 230px;
     width: 230px;
   }
-
-  .pokemon-identification{
+  .pokemon-identification {
     font-size: 1.1rem;
     color: #fff;
   }
   
-  .pokemon-type{
+  .pokemon-type {
     padding-top: 0.2rem;
     font-size: 0.9rem;
     color: #F5E4E5;
   }
 }
+
+
