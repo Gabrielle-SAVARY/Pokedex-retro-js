@@ -34,7 +34,6 @@ Il s'inspire d'un exercice bonus conçu par l'organisme de formation O'clock de 
 ## **Aperçu du Projet**
 ### Mobile
 <img src="./assets/img/results/Electrik-mobile.png" width="280" height="500">
-<img src="./assets/img/results/Glace-mobile.png" width="280" height="500">
 
 ### Tablette
 <img src="./assets/img/results/Dragon-tablet.png" width="400" height="400">
