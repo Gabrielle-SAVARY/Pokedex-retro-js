@@ -41,4 +41,5 @@ Il s'inspire d'un exercice bonus conçu par l'organisme de formation O'clock de 
 ### Desktop
 <img src="./assets/img/results/Pokedex-desktop.png" width="800" height="400">
 <img src="./assets/img/results/Search-desktop.png" width="800" height="400">
+![Alt text](image.png)
 

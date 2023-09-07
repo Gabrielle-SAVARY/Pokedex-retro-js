@@ -16,7 +16,7 @@ const app = {
 		}
 	},
 
-	// Chargement du fichier JSON du pokedex
+	// Chargement du fichier JSON des types de Pokémons
 	getPokemonsTypes: async function () {
 		try {
 			const response = await fetch('./data/pokemonsTypes.json');
@@ -29,7 +29,7 @@ const app = {
 	},
 
 	// FONCTIONS DE CREATION D'ELEMENTS DANS LE DOM
-		// Créer et affiche les cartes Pokémons dans le DOM
+	// Créer et affiche les cartes Pokémons dans le DOM
 	displayPokemon: function (pokemonList) {
 		// Récupère le conteneur où sont affichés les cartes Pokémon
 		const pokemonsList = document.getElementById('pokemons-list');
@@ -47,7 +47,7 @@ const app = {
 
 			// Créez un élément pour afficher l'identification du Pokémon
 			const pokemonIdentification = document.createElement('h2');
-			pokemonIdentification.textContent = `# ${pokemon.index} ${pokemon.name}`;
+			pokemonIdentification.textContent = `#${pokemon.index} ${pokemon.name}`;
 			pokemonIdentification.classList.add('pokemon-identification');
 			// Créez un élément pour afficher le type du Pokémon
 			const pokemonType = document.createElement('h3');
@@ -75,7 +75,7 @@ const app = {
 		const filtersContainer = document.querySelector('.types-list__filters-container');
 		// Crée un bouton pour chaque type de Pokémon
 		types.forEach(type => {
-			// Sélection et ajout d'une classe de style au bouton 
+			// Création du bouton 
 			const button = document.createElement('button');
 			button.textContent = type.typeName;
 			button.classList.add('type-filter-button');
@@ -123,18 +123,24 @@ const app = {
 		const searchInput = document.getElementById('search-input');
 		// Texte recherché par l'utilisateur
 		const searchTerm = searchInput.value.toLowerCase();
-		// Sélection de tous les Pokémon
-		const pokemonCards = document.querySelectorAll('.pokemon-card');
-		// Recherche
-		pokemonCards.forEach(pokemonCard => {
-			const pokemonIdentity = pokemonCard.querySelector('.pokemon-identification').textContent.toLowerCase();
-			const pokemonType = pokemonCard.querySelector('.pokemon-type').textContent.toLowerCase();
-			if (pokemonIdentity.includes(searchTerm) || pokemonType.includes(searchTerm)) {
-				pokemonCard.style.display = 'flex';
-			} else {
-				pokemonCard.style.display = 'none';
-			}
-		});
+		// Vérifie si le texte recherché est valide (lettres, chiffres et espaces)
+		const validSearchTerm = searchTerm.match(/^[a-zA-Z0-9\s]*$/);
+		// Si le texte recherché est valide
+		if (validSearchTerm) {
+			const searchTerms = searchTerm.split(' ')
+			// Sélection de tous les Pokémon
+			const pokemonCards = document.querySelectorAll('.pokemon-card');			
+			// Recherche
+			pokemonCards.forEach(pokemonCard => {
+				const pokemonIdentity = pokemonCard.querySelector('.pokemon-identification').textContent.toLowerCase();
+				const pokemonType = pokemonCard.querySelector('.pokemon-type').textContent.toLowerCase();
+				if (pokemonIdentity.includes(searchTerm) || pokemonType.includes(searchTerm)) {
+					pokemonCard.style.display = 'flex';
+				} else {
+					pokemonCard.style.display = 'none';
+				}
+			});			
+		}
 		// Supprime la classe active de tous les boutons filtres de type
 		app.clearActiveTypeFilter();
 	},
@@ -173,7 +179,7 @@ const app = {
 		});
 	},
 
-	// ECOUTEURS D'EVENEMENTS POURR L'INITIALISATION DE L'APPLICATION
+	// ECOUTEURS D'EVENEMENTS POUR L'INITIALISATION DE L'APPLICATION
 	// Ecouteur d'événement sur la barre de recherche
 	handleTypeSearchBar: function () {
 		// Ajoute un écouteur d'évenement sur l'input pour faire la recherche
