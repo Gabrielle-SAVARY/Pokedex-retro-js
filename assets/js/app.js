@@ -1,6 +1,7 @@
 const app = {
 	pokedex: [],
 	pokemonsTypes: [],
+	activeTypes: [],
 	pokedexEnd: 151,
 
 	// FONCTIONS DE RECUPERATION DE DONNÉES
@@ -70,6 +71,20 @@ const app = {
 		}
 	},
 
+	// Ajoute ou supprime le type dans le tableau des types actifs
+	toggleActiveType: function (type) {
+		// Vérifie si le type est dans le tableau 
+		const index = app.activeTypes.indexOf(type);
+		// Si le type n'est pas dans le tableau, l'ajoute
+		if (index === -1) {
+			app.activeTypes.push(type);
+		} else {
+			// Sinon, supprime le type du tableau
+			app.activeTypes.splice(index, 1);
+		}
+	},
+
+
 	// Créer les boutons de filtre de type de Pokémon
 	createTypeFilterButtons: function (types) {
 		const filtersContainer = document.querySelector('.types-list__filters-container');
@@ -83,13 +98,19 @@ const app = {
 
 			// Ajoute un écouteur d'événement pour le clic sur le bouton
 			button.addEventListener('click', function () {
-				// Reset les filtres et la recherche
+				// Réinitialise la barre de recherche
 				app.clearSearchBar();
-				app.clearActiveTypeFilter();
-				// Ajoute la classe active au bouton de filtre sélectionné
-				button.classList.add('active');
-				// Filtre les Pokémon en fonction du type sélectionné
-				app.filterPokemonByType(type.typeName);
+
+				// Ajoute ou supprime le type actif du tableau
+				app.toggleActiveType(type.typeName);
+				// Met à jour la classe CSS active du bouton
+				if (app.activeTypes.includes(type.typeName)) {
+					button.classList.add('active');
+				} else {
+					button.classList.remove('active');				}
+
+				// Filtre les Pokémon en fonction du tableau des types actifs
+				app.filterPokemonByType(app.activeTypes);
 			});
 
 			// Ajoute le bouton au conteneur des boutons de filtre
@@ -98,17 +119,18 @@ const app = {
 	},
 
 	// FONCTIONS DE FILTRAGE DES DONNÉES
-	// Filtre les Pokémon en fonction du type sélectionné
-	filterPokemonByType: function (type) {
+	// Filtre les Pokémon en fonction des types sélectionnés
+	filterPokemonByType: function (types) {
 		// Sélectionne tous les éléments Pokémon
 		const pokemonCards = document.querySelectorAll('.pokemon-card');
 
-		// Filtre les Pokémon en fonction du type sélectionné
+		// Filtre des Pokémons
 		pokemonCards.forEach(pokemonCard => {
 			// Récupère le type du Pokémon 
 			const pokemonType = pokemonCard.querySelector('.pokemon-type').textContent;
-			// Vérifie si le type du Pokémon est inclus dans le type sélectionné
-			if (pokemonType.includes(type)) {
+			// Vérifie si le type du Pokémon correspond à l'un des types sélectionnés
+			const isMatch = types.some(type => pokemonType.includes(type));
+			if (isMatch) {
 				// Si le type correspond, affiche le Pokémon
 				pokemonCard.style.display = 'flex';
 			} else {
@@ -118,28 +140,55 @@ const app = {
 		});
 	},
 
+	// Fonction pour retirer les accents d'une chaîne
+	removeAccents: function (string) {
+		return string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+	},
+
 	// Filtre les Pokemons selon du texte saisi dans la barre de recherche 
 	handleSearch: function () {
-		const searchInput = document.getElementById('search-input');
 		// Texte recherché par l'utilisateur
+		const searchInput = document.getElementById('search-input');
 		const searchTerm = searchInput.value.toLowerCase();
-		// Vérifie si le texte recherché est valide (lettres, chiffres et espaces)
-		const validSearchTerm = searchTerm.match(/^[a-zA-Z0-9\s]*$/);
-		// Si le texte recherché est valide
-		if (validSearchTerm) {
-			const searchTerms = searchTerm.split(' ')
+		console.log(searchTerm, 'searchTerm');
+		// Si la barre de recherche est vide affiche tous les Pokemons
+		if (searchTerm.length === 0) {
+			app.showAllPokemon();
+		}
+		// Normalise le texte recherché
+		const normalizeSearchTerm = app.removeAccents(searchTerm);
+		console.log(normalizeSearchTerm, 'normalizeSearchTerm');
+
+		if (normalizeSearchTerm) {
+			// Sépare le texte recherché en termes de recherche en ignorant les espaces
+			const searchTerms = normalizeSearchTerm.split(' ').filter(term => term !== '');
+			console.log('searchTerms', searchTerms);
 			// Sélection de tous les Pokémon
-			const pokemonCards = document.querySelectorAll('.pokemon-card');			
+			const pokemonCards = document.querySelectorAll('.pokemon-card');
 			// Recherche
 			pokemonCards.forEach(pokemonCard => {
+				// Récupère l'identification et le type du Pokémon
 				const pokemonIdentity = pokemonCard.querySelector('.pokemon-identification').textContent.toLowerCase();
+				const normalizedPokemonIdentity = app.removeAccents(pokemonIdentity);
 				const pokemonType = pokemonCard.querySelector('.pokemon-type').textContent.toLowerCase();
-				if (pokemonIdentity.includes(searchTerm) || pokemonType.includes(searchTerm)) {
+				const normalizedPokemonType = app.removeAccents(pokemonType);
+
+				// Initialise une variable pour vérifier si au moins un des termes est inclus
+				let found = false;
+
+				// Parcourt chaque terme de recherche
+				searchTerms.forEach(term => {
+					if (normalizedPokemonIdentity.includes(term) || normalizedPokemonType.includes(term)) {
+						found = true;
+					}
+				});
+				// Affiche ou masque le Pokémon 
+				if (found) {
 					pokemonCard.style.display = 'flex';
 				} else {
 					pokemonCard.style.display = 'none';
 				}
-			});			
+			});
 		}
 		// Supprime la classe active de tous les boutons filtres de type
 		app.clearActiveTypeFilter();
@@ -165,6 +214,8 @@ const app = {
 		document.querySelectorAll('.type-filter-button').forEach(btn => {
 			btn.classList.remove('active');
 		});
+		// Vide le tableau des types actifs
+		app.activeTypes = [];
 	},
 
 	handleReset: function (buttonId) {
