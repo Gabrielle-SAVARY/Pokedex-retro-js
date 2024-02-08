@@ -1,0 +1,92 @@
+[
+    {
+      "id": 1,
+      "typeName": "Acier",
+      "typeColor": "#aaaabb"
+    },
+    {
+      "id": 2,
+      "typeName": "Combat",
+      "typeColor": "#bb5544"
+    },
+    {
+      "id": 3,
+      "typeName": "Dragon",
+      "typeColor": "#7766ee"
+    },
+    {
+      "id": 4,
+      "typeName": "Eau",
+      "typeColor": "#3399ff"
+    },
+    {
+      "id": 5,
+      "typeName": "Électrik",
+      "typeColor": "#ffbb33"
+    },
+    {
+      "id": 6,
+      "typeName": "Fée",
+      "typeColor": "#ef71f0"
+    },
+    {
+      "id": 7,
+      "typeName": "Feu",
+      "typeColor": "#ff4422"
+    },
+    {
+      "id": 8,
+      "typeName": "Glace",
+      "typeColor": "#77ddff"
+    },
+    {
+      "id": 9,
+      "typeName": "Insecte",
+      "typeColor": "#aabb22"
+    },
+    {
+      "id": 10,
+      "typeName": "Normal",
+      "typeColor": "#bbaabb"
+    },
+    {
+      "id": 11,
+      "typeName": "Plante",
+      "typeColor": "#77cc55"
+    },
+    {
+      "id": 12,
+      "typeName": "Poison",
+      "typeColor": "#aa5599"
+    },
+    {
+      "id": 13,
+      "typeName": "Psy",
+      "typeColor": "#ff5599"
+    },
+    {
+      "id": 14,
+      "typeName": "Roche",
+      "typeColor": "#bbaa66"
+    },
+    {
+      "id": 15,
+      "typeName": "Sol",
+      "typeColor": "#ddbb55"
+    },
+    {
+      "id": 16,
+      "typeName": "Spectre",
+      "typeColor": "#6666bb"
+    },
+    {
+      "id": 176,
+      "typeName": "Ténèbres",
+      "typeColor": "#665544"
+    },
+    {
+      "id": 18,
+      "typeName": "Vol",
+      "typeColor": "#6699ff"
+    }
+  ]
