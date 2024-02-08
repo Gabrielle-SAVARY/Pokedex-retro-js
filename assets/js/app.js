@@ -35,10 +35,9 @@ const app = {
   // Récupère la couleur associée à un type
   getTypeColor: function (type) {
     const typeInfo = app.pokemonsTypes.find((typePokemon) => typePokemon.typeName === type);
-	console.log(typeInfo, "typeInfo", type, "type");
     return typeInfo ? typeInfo.typeColor : "";
   },
-  
+
   // Créer et affiche les cartes Pokémons dans le DOM
   displayPokemon: function (pokemonList) {
     // Récupère le conteneur où sont affichés les cartes Pokémon
@@ -157,11 +156,15 @@ const app = {
 
     // Filtre des Pokémons
     pokemonCards.forEach((pokemonCard) => {
-      // Récupère le type du Pokémon
-      const pokemonType =
-        pokemonCard.querySelector(".pokemon-type").textContent;
-      // Vérifie si le type du Pokémon correspond à l'un des types sélectionnés
-      const isMatch = types.some((type) => pokemonType.includes(type));
+		// Récupère le type du Pokémon
+		const pokemonAllTypes = pokemonCard.querySelectorAll(".pokemon-type");
+    
+	    // Vérifie si au moins un des types du Pokémon correspond à l'un des types sélectionnés
+		const isMatch = Array.from(pokemonAllTypes).some((typeElement) => {
+			const pokemonType = typeElement.textContent;
+			return types.some((type) => pokemonType.includes(type));
+		  });
+
       if (isMatch) {
         // Si le type correspond, affiche le Pokémon
         pokemonCard.style.display = "flex";
