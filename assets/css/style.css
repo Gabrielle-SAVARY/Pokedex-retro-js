@@ -42,17 +42,18 @@ h1 {
 }
 
 #search-input {
+  font-family: 'Press Start 2P', system-ui;
   flex-grow: 1;
   padding: 10px;
   border: 1px solid #ccc;
   border-left: none;
-  font-size: 0.8rem;
+  font-size: 14px;
   outline: none;
   color: #383E42;
 }
 
 /*Icône: search */
-.search-bar__search-icon {
+.search-bar__search-icon {  
   color: gray;
   border: 1px solid #ccc;
   border-right: none;
@@ -132,10 +133,20 @@ h1 {
 
 /*Bouton filtre type pokemon*/
 .type-filter-button {
-  border: none;
+  font-family: 'Press Start 2P', system-ui;
+
+  font-size: 12px;
+  border: 2px solid black;
+  color: white; 
+  text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+
+
   cursor: pointer;
-  border-radius: 5px;
-  color: #fff;
+
   transition: transform 0.2s;
   margin: 0.3rem;
   padding: 8px;
@@ -143,8 +154,6 @@ h1 {
 }
 
 .type-filter-button:hover {
-  font-weight: bold;
-  color: black;
   filter: brightness(1.2);
 }
 
@@ -154,7 +163,7 @@ h1 {
   font-weight: bold;
   font-size: 0.9rem;
   transform: scale(1.1);
-  color: black;
+
 }
 
 main {
@@ -199,7 +208,13 @@ main {
   justify-content: center;
   margin: 0.2rem;
   padding: 0.5rem;
+  transition: transform 0.3s ease-in-out;
+
 }
+.pokemon-card:hover .pokemon-img {
+  transform: scale(1.15); /* Augmente la taille de 20% */
+}
+
 
 /*Informations pokemon: numéroindex et nom*/
 .pokemon-infos {
@@ -209,7 +224,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'Press Start 2P', system-ui;
+  font-family: 'Press Start 2P', system-ui, 'Noto Sans JP', sans-serif;
 }
 
 .pokemon-identification {
@@ -232,8 +247,7 @@ main {
   padding:6px;
   font-size: 10px;
   border: 2px solid black;
-
-  color: white; /* Couleur du texte */
+  color: white; 
   text-shadow:
     -1px -1px 0 black,
      1px -1px 0 black,
