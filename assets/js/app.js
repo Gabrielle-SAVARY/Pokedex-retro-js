@@ -69,7 +69,7 @@ const app = {
           // Créez un span pour chaque type
           const typeSpan = document.createElement("span");
           typeSpan.textContent = type;
-          typeSpan.classList.add("pokemon-type", `type-${type}`);
+          typeSpan.classList.add("pokemon-type", `${type}`);
 
           // Récupère la couleur associée au type
           const typeColor = app.getTypeColor(type);
@@ -103,6 +103,7 @@ const app = {
   toggleActiveType: function (type) {
     // Vérifie si le type est dans le tableau
     const index = app.activeTypes.indexOf(type);
+    console.log("index", index);
     // Si le type n'est pas dans le tableau, l'ajoute
     if (index === -1) {
       app.activeTypes.push(type);
@@ -164,7 +165,7 @@ const app = {
 			const pokemonType = typeElement.textContent;
 			return types.some((type) => pokemonType.includes(type));
 		  });
-
+      
       if (isMatch) {
         // Si le type correspond, affiche le Pokémon
         pokemonCard.style.display = "flex";
@@ -202,26 +203,29 @@ const app = {
       console.log("searchTerms", searchTerms);
       // Sélection de tous les Pokémon
       const pokemonCards = document.querySelectorAll(".pokemon-card");
-      // Recherche
       pokemonCards.forEach((pokemonCard) => {
-        // Récupère l'identification et le type du Pokémon
+        // Récupère l'identification et le type du Pokémon en miniscule et sans accent
         const pokemonIdentity = pokemonCard
           .querySelector(".pokemon-identification")
           .textContent.toLowerCase();
         const normalizedPokemonIdentity = app.removeAccents(pokemonIdentity);
-        const pokemonType = pokemonCard
-          .querySelector(".pokemon-type")
-          .textContent.toLowerCase();
-        const normalizedPokemonType = app.removeAccents(pokemonType);
 
-        // Initialise une variable pour vérifier si au moins un des termes est inclus
+        const pokemonAllTypes = pokemonCard.querySelectorAll(".pokemon-type"); 
+        const normalizedPokemonTypes = Array.from(pokemonAllTypes).map(typeElement => {
+          // Récupère la 2ème classe avec le nom du type
+          const typeNames = typeElement.classList[1].toLowerCase();
+          return app.removeAccents(typeNames);
+   
+        });
+        
         let found = false;
 
-        // Parcourt chaque terme de recherche
+        // Parcourt chaque terme de recherche et vérifie si les infos ou types du Pokémon correspondent à un terme
         searchTerms.forEach((term) => {
           if (
-            normalizedPokemonIdentity.includes(term) ||
-            normalizedPokemonType.includes(term)
+            normalizedPokemonIdentity.includes(term) 
+            ||
+            normalizedPokemonTypes.some((type) => type.includes(term))
           ) {
             found = true;
           }
