@@ -209,10 +209,14 @@ main {
   margin: 0.2rem;
   padding: 0.5rem;
   transition: transform 0.3s ease-in-out;
-
+  filter: sepia(50%) saturate(150%);
 }
+
+
+
 .pokemon-card:hover .pokemon-img {
   transform: scale(1.15); /* Augmente la taille de 20% */
+  filter:none;
 }
 
 
