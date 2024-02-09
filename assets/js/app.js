@@ -30,11 +30,12 @@ const app = {
     }
   },
 
-  
   // FONCTIONS DE CREATION D'ELEMENTS DANS LE DOM
   // Récupère la couleur associée à un type
   getTypeColor: function (type) {
-    const typeInfo = app.pokemonsTypes.find((typePokemon) => typePokemon.typeName === type);
+    const typeInfo = app.pokemonsTypes.find(
+      (typePokemon) => typePokemon.typeName === type
+    );
     return typeInfo ? typeInfo.typeColor : "";
   },
 
@@ -101,16 +102,21 @@ const app = {
 
   // Ajoute ou supprime le type dans le tableau des types actifs
   toggleActiveType: function (type) {
-    // Vérifie si le type est dans le tableau
-    const index = app.activeTypes.indexOf(type);
-    console.log("index", index);
-    // Si le type n'est pas dans le tableau, l'ajoute
-    if (index === -1) {
+    // Vérifie si le type est actif
+    const isTypeActive = app.activeTypes.includes(type);
+    console.log(type, "isTypeActive", isTypeActive);
+    
+    if (!isTypeActive) {
+      // Si le type n'est pas dans le tableau, l'ajoute
       app.activeTypes.push(type);
+      console.log("FALSE", app.activeTypes);
     } else {
       // Sinon, supprime le type du tableau
-      app.activeTypes.splice(index, 1);
+      const typeIndex = app.activeTypes.indexOf(type);
+      app.activeTypes.splice(typeIndex, 1);
+      console.log("TRUE", app.activeTypes);
     }
+
   },
 
   // Créer les boutons de filtre de type de Pokémon
@@ -155,17 +161,23 @@ const app = {
     // Sélectionne tous les éléments Pokémon
     const pokemonCards = document.querySelectorAll(".pokemon-card");
 
+    // Si aucun type n'est sélectionné, affiche tous les Pokémon
+    if (types.length === 0) {
+      app.showAllPokemon();
+      return;
+    }
+
     // Filtre des Pokémons
     pokemonCards.forEach((pokemonCard) => {
-		// Récupère le type du Pokémon
-		const pokemonAllTypes = pokemonCard.querySelectorAll(".pokemon-type");
-    
-	    // Vérifie si au moins un des types du Pokémon correspond à l'un des types sélectionnés
-		const isMatch = Array.from(pokemonAllTypes).some((typeElement) => {
-			const pokemonType = typeElement.textContent;
-			return types.some((type) => pokemonType.includes(type));
-		  });
-      
+      // Récupère le type du Pokémon
+      const pokemonAllTypes = pokemonCard.querySelectorAll(".pokemon-type");
+
+      // Vérifie si au moins un des types du Pokémon correspond à l'un des types sélectionnés
+      const isMatch = Array.from(pokemonAllTypes).some((typeElement) => {
+        const pokemonType = typeElement.textContent;
+        return types.some((type) => pokemonType.includes(type));
+      });
+
       if (isMatch) {
         // Si le type correspond, affiche le Pokémon
         pokemonCard.style.display = "flex";
@@ -210,21 +222,21 @@ const app = {
           .textContent.toLowerCase();
         const normalizedPokemonIdentity = app.removeAccents(pokemonIdentity);
 
-        const pokemonAllTypes = pokemonCard.querySelectorAll(".pokemon-type"); 
-        const normalizedPokemonTypes = Array.from(pokemonAllTypes).map(typeElement => {
-          // Récupère la 2ème classe avec le nom du type
-          const typeNames = typeElement.classList[1].toLowerCase();
-          return app.removeAccents(typeNames);
-   
-        });
-        
+        const pokemonAllTypes = pokemonCard.querySelectorAll(".pokemon-type");
+        const normalizedPokemonTypes = Array.from(pokemonAllTypes).map(
+          (typeElement) => {
+            // Récupère la 2ème classe avec le nom du type
+            const typeNames = typeElement.classList[1].toLowerCase();
+            return app.removeAccents(typeNames);
+          }
+        );
+
         let found = false;
 
         // Parcourt chaque terme de recherche et vérifie si les infos ou types du Pokémon correspondent à un terme
         searchTerms.forEach((term) => {
           if (
-            normalizedPokemonIdentity.includes(term) 
-            ||
+            normalizedPokemonIdentity.includes(term) ||
             normalizedPokemonTypes.some((type) => type.includes(term))
           ) {
             found = true;
