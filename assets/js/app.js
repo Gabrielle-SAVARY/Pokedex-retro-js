@@ -10,7 +10,6 @@ const app = {
     try {
       const response = await fetch("./data/pokedex.json");
       const data = await response.json();
-      console.log(data, "data");
       return data;
     } catch (error) {
       console.error("Erreur lors du chargement des données:", error);

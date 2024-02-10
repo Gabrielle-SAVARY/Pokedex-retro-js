@@ -47,9 +47,10 @@ h1 {
   padding: 10px;
   border: 1px solid #ccc;
   border-left: none;
-  font-size: 14px;
+  font-size: 12px;
   outline: none;
   color: #383E42;
+  overflow: hidden;
 }
 
 /*Icône: search */
@@ -138,7 +139,9 @@ h1 {
 .type-filter-button {
   margin: 0.3rem;
   padding: 8px;
+  min-width: fit-content;
   width: 30%;
+  max-width: 30%;
   font-family: 'Press Start 2P', system-ui;
   font-size: 12px;
   border: 2px solid black;
@@ -348,7 +351,7 @@ footer a {
   }
 
   #search-input {
-    font-size: 1rem;
+    font-size: 14px;
   }
 
   #pokemons-list {
@@ -375,6 +378,10 @@ footer a {
 
   .type-filter-button {
     margin: 0.4rem;
+  }
+
+  #search-input {
+    font-size: 1rem;
   }
 
   #pokemons-list {
