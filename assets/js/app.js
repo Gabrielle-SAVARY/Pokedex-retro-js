@@ -39,6 +39,31 @@ const app = {
     return typeInfo ? typeInfo.typeColor : "";
   },
 
+  // FONCTIONS DE SCROLL
+  scrollToTopEffect: function () {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  },
+
+  scrollToTop: function () {
+    const scrollToTopBtn = document.getElementById("scroll-to-top");
+    // Gestion de l'affichage du bouton scroll to top
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      scrollToTopBtn.style.display = "inline-block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+
+    // Ajout d'un écouteur d'événement sur le clic du bouton
+    scrollToTopBtn.addEventListener("click", app.scrollToTopEffect);
+  },
+
   // Créer et affiche les cartes Pokémons dans le DOM
   displayPokemon: function (pokemonList) {
     // Récupère le conteneur où sont affichés les cartes Pokémon
@@ -105,7 +130,7 @@ const app = {
     // Vérifie si le type est actif
     const isTypeActive = app.activeTypes.includes(type);
     console.log(type, "isTypeActive", isTypeActive);
-    
+
     if (!isTypeActive) {
       // Si le type n'est pas dans le tableau, l'ajoute
       app.activeTypes.push(type);
@@ -116,7 +141,6 @@ const app = {
       app.activeTypes.splice(typeIndex, 1);
       console.log("TRUE", app.activeTypes);
     }
-
   },
 
   // Créer les boutons de filtre de type de Pokémon
@@ -326,6 +350,10 @@ const app = {
     app.loadPokedex();
     // Initialisation des gestionnaires d'événements
     app.initHandlers();
+    // Initialisation de l'écouteur d'événement pour le bouton scroll-to-top
+    window.onscroll = function () {
+      app.scrollToTop();
+    };
   },
 };
 
