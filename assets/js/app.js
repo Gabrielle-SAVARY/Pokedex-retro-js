@@ -80,7 +80,7 @@ const app = {
       pokemonInfos.classList.add("pokemon-infos");
 
       // Créez un élément pour afficher l'identification du Pokémon
-      const pokemonIdentification = document.createElement("h2");
+      const pokemonIdentification = document.createElement("h3");
       pokemonIdentification.textContent = `#${pokemon.index} ${pokemon.name}`;
       pokemonIdentification.classList.add("pokemon-identification");
 
