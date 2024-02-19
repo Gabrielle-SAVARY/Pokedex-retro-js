@@ -28,9 +28,17 @@ header {
 }
 
 h1 {
+  font-size: 2rem;
+  /* color: #383E42; */
+  color:#E5543C;
+  text-align: center;
+  margin: 1rem 0 4rem 0;
+}
+h2 {
   font-size: 1.5rem;
   color: #383E42;
   text-align: center;
+  margin: 1rem 0 4rem 0;
 }
 
 /* BARRE DE RECHERCHE */
@@ -38,7 +46,7 @@ h1 {
   display: flex;
   align-items: center;
   width: 100%;
-  padding-top: 1rem;
+  padding: 2rem 0 1rem 0;
 }
 
 #search-input {
@@ -86,10 +94,10 @@ h1 {
 /*FILTRE TYPES POKEMONS*/
 .types-list {
   width: 100%;
-  margin: 0.5rem;
+  margin: 0.8rem;
   background-color: #F5E4E5;
   /* background-color: #a99c9d; */
-  padding: 0.2rem;
+  padding: 1rem;
   border-radius: 25px;
 }
 
@@ -97,12 +105,14 @@ h1 {
   display: flex;
   flex-direction: row wrap;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  padding: 1rem 0 0.8rem 0;
 }
 
 .types-list__header-title {
   font-size: 1rem;
-  margin: 0.5rem;
+  margin-right: 1.5rem;
+
 }
 
 /* Bouton reset des filtres de type de Pokemons */
@@ -332,7 +342,7 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  min-height: 5rem;
+  min-height: 8rem;
   width: 100%;
   background-color: #383E42;
   font-family: 'Press Start 2P', system-ui;
