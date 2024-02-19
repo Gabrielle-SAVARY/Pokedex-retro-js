@@ -20,25 +20,67 @@ header {
   justify-content: center;
   width: 90%;
   border-radius: 25px;
-  background-color: #fff;
-  color: #383E42;
   font-family: 'Press Start 2P', system-ui;
   margin: 1rem;
   padding: 1.2rem;
 }
 
-h1 {
-  font-size: 2rem;
-  /* color: #383E42; */
-  color:#E5543C;
-  text-align: center;
-  margin: 1rem 0 4rem 0;
+/*LOGO ET NOM DU SITE*/
+.header__pokedex-retro-js{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
-h2 {
-  font-size: 1.5rem;
-  color: #383E42;
+
+
+.header__pokedex-retro-js__logo{
+  height:180px;
+}
+
+.header__pokedex-retro-js__title {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  /* color:#E5543C; */
+  color:#F5E4E5;
   text-align: center;
-  margin: 1rem 0 4rem 0;
+  text-transform: uppercase;
+}
+
+/*HERO*/
+.header__hero{
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.header__hero__image{
+  height: 200px;
+}
+
+.header__hero__title {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  /* color: #383E42; */
+  color:#fff;
+  text-align: center;
+}
+
+/*FILTRES: BARRE DE RECHERCHES ET BOUTONS TYPES POKEMONS*/
+.filters-container{
+  background-color: #fff;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 24px;
 }
 
 /* BARRE DE RECHERCHE */
@@ -112,6 +154,7 @@ h2 {
 .types-list__header-title {
   font-size: 1rem;
   margin-right: 1.5rem;
+  color:#383E42;
 
 }
 
@@ -141,7 +184,6 @@ h2 {
   align-items: center;
   width: 100%;
   margin-bottom: 1rem;
-
   gap: 1rem;
 }
 
@@ -356,6 +398,10 @@ footer a {
 
 /* Responsive: Media queries tablette */
 @media screen and (min-width: 768px) {
+  .header__hero__image{
+    height: 400px;
+  }
+
   .search-bar {
     width: 80%;
   }
@@ -377,6 +423,19 @@ footer a {
 
 /* Responsive: Media queries desktop*/
 @media screen and (min-width: 1024px) {
+  .header__hero{
+    flex-flow: row nowrap;
+  }
+
+  .header__hero__image{
+    height: 500px;
+  }
+
+  .header__hero__title {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+
   .types-list__header {
     justify-content: flex-start;
     width: 80%;
