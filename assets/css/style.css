@@ -37,6 +37,7 @@ body {
   align-items: center;
   background-color: var(--primary-background-color);
   color: var(--body-text-color);
+  overflow-x: hidden;
 }
 
 header {
