@@ -1,3 +1,29 @@
+:root {
+  /* Couleurs arrière plan et éléments */
+  --primary-background-color: #C14040; 
+  --pokemon-card-background-color: #982c2c;
+  --accent-color: #E5543C;   
+  --dark-background-color: #383E42;
+  --light-background-color: #F5E4E5;
+
+  /* Couleurs textes */
+  --header-title-color: #F5E4E5;
+  --body-text-color: #fff;  
+
+/* Couleurs filtres pokemons */
+  --filters-container-background-color: #fff;
+
+  /* Couleurs barre de recherche */
+  --search-bar-border-color: #ccc;
+  --search-bar-text-color: #383E42;
+  
+  /* Couleurs bouton filtre types pokemons */
+  --pokemons-types-list-background-color: #F5E4E5;
+  --pokemons-types-list-border-color: #ccc;
+  --pokemons-types-list-title-color: #383E42;
+  --pokemons-types-list-btn-3dEffect-color: #383E42; 
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,8 +35,8 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
-  background-color: #C14040;
-  color: #fff;
+  background-color: var(--primary-background-color);
+  color: var(--body-text-color);
 }
 
 header {
@@ -43,8 +69,7 @@ header {
 .header__pokedex-retro-js__title {
   font-size: 1.75rem;
   line-height: 2rem;
-  /* color:#E5543C; */
-  color:#F5E4E5;
+  color:var(--header-title-color);
   text-align: center;
   text-transform: uppercase;
 }
@@ -66,14 +91,12 @@ header {
 .header__hero__title {
   font-size: 1.2rem;
   line-height: 1.5rem;
-  /* color: #383E42; */
-  color:#fff;
   text-align: center;
 }
 
 /*FILTRES: BARRE DE RECHERCHES ET BOUTONS TYPES POKEMONS*/
 .filters-container{
-  background-color: #fff;
+  background-color: var(--filters-container-background-color);
   border-radius: 25px;
   display: flex;
   flex-direction: column;
@@ -95,31 +118,33 @@ header {
   font-family: 'Press Start 2P', system-ui;
   flex-grow: 1;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--search-bar-border-color);
   border-left: none;
   font-size: 12px;
   outline: none;
-  color: #383E42;
+  color: var(--search-bar-text-color);
   overflow: hidden;
 }
 
 /*Icône: search */
 .search-bar__search-icon {
-  color: gray;
-  border: 1px solid #ccc;
+  color: var(--accent-color);
+  border: 1px solid var(--search-bar-border-color);
   border-right: none;
   padding: 0 8px 0 8px;
   height: 100%;
   border-radius: 4px 0 0 4px;
   display: flex;
   align-items: center;
+  font-size: 32px;
+  font-weight: 600;
 }
 
 /* Bouton reset barre recherche */
 #reset-search-button {
-  background-color: #982c2c;
-  border: 1px solid #982c2c;
-  color: #fff;
+  background-color: var(--primary-background-color);
+  border: 1px solid var(--primary-background-color);
+  color: var(--reset-btn-text-color);
   border-radius: 0 4px 4px 0;
   padding: 0 10px 0 10px;
   height: 100%;
@@ -130,15 +155,14 @@ header {
 /*Boutons reset survol*/
 #reset-search-button:hover,
 #reset-filter-button:hover {
-  background-color: #C14040;
+  background-color: var(--accent-color);
 }
 
 /*FILTRE TYPES POKEMONS*/
 .types-list {
   width: 100%;
   margin: 0.8rem;
-  background-color: #F5E4E5;
-  /* background-color: #a99c9d; */
+  background-color: var(--pokemons-types-list-background-color);
   padding: 1rem;
   border-radius: 25px;
 }
@@ -155,8 +179,7 @@ header {
   font-size: 1rem;
   font-weight: bold;
   margin-right: 1.5rem;
-  color:#383E42;
-
+  color:var(--pokemons-types-list-title-color);
 }
 
 /* Bouton reset des filtres de type de Pokemons */
@@ -169,8 +192,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #982c2c;
-  color: #fff;
+  background-color: var(--primary-background-color);
+  color: var(--body-text-color);
   padding: 8px;
 }
 
@@ -199,7 +222,7 @@ header {
   font-family: 'Press Start 2P', system-ui;
   font-size: 12px;
   border: 2px solid black;
-  color: white;
+  color: var(--body-text-color);
   text-shadow:
     -1px -1px 0 black,
     1px -1px 0 black,
@@ -226,12 +249,12 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #383E42;
+  background: var(--pokemons-types-list-btn-3dEffect-color);
   border-radius: inherit;
 
-  /*/ effet 3D  */
+  /*/ EFFET 3D  */
   box-shadow: 0 0 0 2px black, 0 0.525em 0 0 rgba(0, 0, 0, 0.19);
-  /*bordure et ombre de la proofondeur sous bouton*/
+  /*bordure et ombre de la profondeur sous bouton*/
   transform: translate3d(0, 0.75em, -1em);
   /* effet de profondeur: axe z */
   transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
@@ -289,7 +312,7 @@ main {
   align-items: center;
   height: 320px;
   width: 320px;
-  background-color: #982c2c;
+  background-color: var(--pokemon-card-background-color);
   border-radius: 50%;
   margin: 0.5rem 1.2rem 0.5rem 1.2rem;
   padding: 2rem;
@@ -329,9 +352,9 @@ main {
 
 .pokemon-identification {
   font-size: 1rem;
-  color: #fff;
   text-align: center;
   text-transform: uppercase;
+  color: var(--body-text-color);
 }
 
 /*Types pokemon*/
@@ -348,7 +371,7 @@ main {
   padding: 6px;
   font-size: 10px;
   border: 2px solid black;
-  color: white;
+  color: var(--body-text-color);
   text-shadow:
     -1px -1px 0 black,
     1px -1px 0 black,
@@ -361,7 +384,7 @@ main {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: white;
+  background-color: var(--body-text-color);
   border: none;
   padding: 12px;
   border-radius: 50%;
@@ -369,7 +392,7 @@ main {
   transition: background-color 0.3s ease;
 }
 #scroll-to-top:hover {
-  background-color: #F5E4E5;
+  background-color: var(--light-background-color);
 }
 
 #scroll-to-top .material-symbols-outlined {
@@ -377,7 +400,7 @@ main {
   font-weight: bold;
 }
 #scroll-to-top:hover .material-symbols-outlined {
-  color: black;
+  color: var(--accent-color);
 }
 
 footer {
@@ -387,7 +410,7 @@ footer {
   justify-content: center;
   gap: 1rem;
   width: 100%;
-  background-color: #383E42;
+  background-color: var(--dark-background-color);
   font-family: 'Press Start 2P', system-ui;
   font-size: 0.8rem;
   padding: 1rem;
@@ -407,7 +430,7 @@ footer {
 
 
 footer a {
-  color: #C14040;
+  color: var(--accent-color);
   text-decoration: none;
 }
 
