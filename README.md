@@ -1,28 +1,26 @@
 # Pokédex-rétro JS  <img src="./assets/img/pokeball.png" width="60" height="60">
 
 ## Description
-Ce mini-projet est une single page qui permet de parcourir avec nostalgie un Pokédex la première génération de pokemons (soit une liste de 151 pokemons 🦄).  
+Cette single page vous invite à explorer avec nostalgie le Pokédex de la première génération, comprenant les 151 Pokémon emblématiques 🦄.
 Il est possible de filtrer les pokémons (recherche libre avec une barre de recherche ou par type de pokemon avec des boutons).  
-Ce projet est un exercice d'entraînement à la manipulation du DOM en utilisant HTML, CSS et JavaScript (vanilla) pour créer une page web dynamique et responsive.
+Ce mini-projet est un exercice d'entraînement à la manipulation du DOM en utilisant HTML, CSS et JavaScript (vanilla) pour créer une page web dynamique et responsive.
 
-### Le  côté rétro est apporté par:
-- le choix de la police.
-- les images des pokémons qui sont fidèles aux désigns lors de la diffusion TV dans les années 90.
-- les boutons de filtres des  types de pokemons qui immitent les touches d'un clavier mécanique.
-- un filtre sépia appliqués aux pokemons qui disparait lors du survol du pokemon.
+### L'aspect rétro est apporté par:
+- Le choix d'une police pixélisée.
+- Les images des pokémons qui sont fidèles aux désigns des années 90.
+- Les boutons de filtres des  types de pokemons qui immitent les touches d'un clavier mécanique.
+- L'application d'un filtre sépia un filtre sépia appliqués aux pokemons qui disparait lors du survol du pokemon.
 </br>
 </br>
 
 ## Fonctionnalités
-La page d'accueil du Pokédex devrait accomplir les tâches suivantes :
+1. &#x1F50D;**Barre de Recherche :** Elle permet aux utilisateurs de rechercher des pokémons spécifiques par leur nom, leur numéro ou leur type.
 
-1. &#x1F50D;**Barre de Recherche :** Elle permet aux utilisateurs de rechercher des Pokémons spécifiques par leur nom, leur numéro ou leur type.
-
-2. &#x2328;**Filtrage par Type de pokemon :** Des boutons de filtrage sont inclus pour permettre aux utilisateurs de filtrer les Pokémons en fonction de leurs types (par exemple, Plante, Feu, Eau, etc.).
+2. &#x2328;**Boutons par Type de pokemon :** Ces boutons permettent de filtrer les pokémons par leurs types (par exemple, Plante, Feu, Eau, etc.).
    
-3. &#x274C;**Suppression du filtrage par Type et de la recherche :** Des boutons de suppression des filtres (icones avec le symbole de croix) et de la recherche permettent aux utilisateurs de retrouver le pokedex complet.
+3. &#x274C;**Suppression du filtrage par Type et de la recherche :** Deux boutons (icones avec le symbole de croix) permettent de supprimer les filtres appliqués  afin de retrouver le pokedex complet.
    
-4. &#x1F51D;**Bouton scroll to top :** Dès que le scroll est activé sur la page le bouton apparait. Il permet de revenir en haut de la page du pokedex.
+4. &#x1F51D;**Bouton scroll to top :** Visible lors du défilement du pokedex, ce bouton permet de revenir en haut de la page du pokedex.
 </br>
 </br>
 
@@ -34,8 +32,12 @@ La page d'accueil du Pokédex devrait accomplir les tâches suivantes :
 </br>
 
 ## **Comment Utiliser le Pokédex**
-1. Clonez ce référentiel (repository) sur votre ordinateur.
-2. Ouvrez le fichier `index.html` dans votre navigateur web pour accéder au Pokédex. 
+<u>**Version visiteur**</u>
+- Cliquer sur le lien: [ICI](https://gabrielle-savary.github.io/Pokedex-retro-js/)  
+  
+<u>**Version Dev**</u>
+- Clonez ce référentiel (repository) sur votre ordinateur.
+- Ouvrez le fichier `index.html` dans votre navigateur web pour accéder au Pokédex. 
 </br>
 </br>
 
