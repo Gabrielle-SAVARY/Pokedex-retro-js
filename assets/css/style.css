@@ -16,7 +16,7 @@
   /* Couleurs barre de recherche */
   --search-bar-border-color: #ccc;
   --search-bar-text-color: #383E42;
-  
+
   /* Couleurs bouton filtre types pokemons */
   --pokemons-types-list-background-color: #F5E4E5;
   --pokemons-types-list-border-color: #ccc;
@@ -178,6 +178,7 @@ header {
 .types-list__header-title {
   font-size: 1rem;
   font-weight: bold;
+  text-align: justify;
   margin-right: 1.5rem;
   color:var(--pokemons-types-list-title-color);
 }

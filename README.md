@@ -1,45 +1,67 @@
-# Pokedex-JS 
+# Pokédex-rétro JS  <img src="./assets/img/pokeball.png" width="60" height="60">
 
 ## Description
-Ce projet est un exercice d'entraînement à la manipulation du DOM en utilisant HTML, CSS et JavaScript pour créer une page web dynamique et responsive représentant un Pokédex de 151 Pokemons.
-Un Pokédex est un dispositif électronique fictif qui répertorie et stocke des informations sur les Pokémons. Chaque Pokémon a ses propres caractéristiques et types, ce qui les rend uniques et intéressants.
+Ce mini-projet est une single page qui permet de parcourir avec nostalgie un Pokédex la première génération de pokemons (soit une liste de 151 pokemons 🦄).  
+Il est possible de filtrer les pokémons (recherche libre avec une barre de recherche ou par type de pokemon avec des boutons).  
+Ce projet est un exercice d'entraînement à la manipulation du DOM en utilisant HTML, CSS et JavaScript (vanilla) pour créer une page web dynamique et responsive.
 
-## Objectif
+### Le  côté rétro est apporté par:
+- le choix de la police.
+- les images des pokémons qui sont fidèles aux désigns lors de la diffusion TV dans les années 90.
+- les boutons de filtres des  types de pokemons qui immitent les touches d'un clavier mécanique.
+- un filtre sépia appliqués aux pokemons qui disparait lors du survol du pokemon.
+</br>
+</br>
+
+## Fonctionnalités
 La page d'accueil du Pokédex devrait accomplir les tâches suivantes :
 
-1. **Barre de Recherche :** Une barre de recherche est mise en place pour permettre aux utilisateurs de rechercher des Pokémon spécifiques par leur nom, leur numéro ou leur type.
+1. &#x1F50D;**Barre de Recherche :** Elle permet aux utilisateurs de rechercher des Pokémons spécifiques par leur nom, leur numéro ou leur type.
 
-2. **Filtrage par Type :** Des boutons de filtrage sont inclus pour permettre aux utilisateurs de filtrer les Pokémon en fonction de leurs types (par exemple, Plante, Feu, Eau, etc.).
+2. &#x2328;**Filtrage par Type de pokemon :** Des boutons de filtrage sont inclus pour permettre aux utilisateurs de filtrer les Pokémons en fonction de leurs types (par exemple, Plante, Feu, Eau, etc.).
    
-3. **Suppression du filtrage par Type et de la recherche:** Des boutons de suppression du filtrage et du texte de rechecher sont inclus pour permettre aux utilisateurs de retrouver le pokedex complet.
-
-
-## **Comment Utiliser le Pokédex**
-1. Clonez ce référentiel (repository) sur votre ordinateur.
-2. Ouvrez le fichier `index.html` dans votre navigateur web pour accéder au Pokédex.
+3. &#x274C;**Suppression du filtrage par Type et de la recherche :** Des boutons de suppression des filtres (icones avec le symbole de croix) et de la recherche permettent aux utilisateurs de retrouver le pokedex complet.
+   
+4. &#x1F51D;**Bouton scroll to top :** Dès que le scroll est activé sur la page le bouton apparait. Il permet de revenir en haut de la page du pokedex.
+</br>
+</br>
 
 ## **Technologies Utilisées**
 - HTML 🖥️
 - CSS 🎨
 - JavaScript (Vanilla) 🧪
+</br>
+</br>
 
-## **Auteur**
-[Gabrielle SAVARY]
+## **Comment Utiliser le Pokédex**
+1. Clonez ce référentiel (repository) sur votre ordinateur.
+2. Ouvrez le fichier `index.html` dans votre navigateur web pour accéder au Pokédex. 
+</br>
+</br>
 
-## **Remarques**
-Ce projet a été créé dans le cadre d'un exercice d'entraînement à la manipulation du DOM avec JavaScript et répondre à la compétence A1 CP3 du titre professionnel Developpeur Web et Web Mobile. 
-Il est destiné à aider les développeurs à renforcer leurs compétences en HTML, CSS et JavaScript, ainsi qu'à les familiariser avec la création de pages web dynamiques.
-Il s'inspire d'un exercice bonus conçu par l'organisme de formation O'clock de la création d'un pokedex avec un serveur express.
+
+## **Remarques**: 
+Ce projet a été créé pour répondre à la compétence A1 CP3 du titre professionnel Developpeur Web et Web Mobile. 
+Son design a été retravaillé en 2024 pour donner l'aspect rétro.
+</br>
+</br>
+
+## **Auteur**: Gabrielle SAVARY  
+</br>
+</br>
+  
 
 ## **Aperçu du Projet**
-### Mobile
-<img src="./assets/img/results/Electrik-mobile.png" width="280" height="500">
-
-### Tablette
-<img src="./assets/img/results/Dragon-tablet.png" width="400" height="400">
-
 ### Desktop
-<img src="./assets/img/results/Pokedex-desktop.png" width="800" height="400">
-<img src="./assets/img/results/Search-desktop.png" width="800" height="400">
-![Alt text](image.png)
+<img src="./assets/img/results/pokedex-home_desktop.png" width="1100" height="500">
+<img src="./assets/img/results/pokedex-home2_desktop.png" width="1100" height="500">
+<img src="./assets/img/results/pokedex-home3_desktop.png" width="1100" height="500">
 
+#### Desktop - barre de recherche: "ron"
+<img src="./assets/img/results/pokedex-search_desktop.png" width="1100" height="500">
+
+### Tablette - filtre type fée (survol pokemon rondoudou)
+<img src="./assets/img/results/pokedex-fee_tablet.png" width="500" height="757">
+
+### Mobile - filtre type spectre
+<img src="./assets/img/results/pokedex-spectre_mobile.png" width="274" height="732">
