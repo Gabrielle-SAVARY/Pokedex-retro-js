@@ -1,16 +1,16 @@
 :root {
   /* Couleurs arrière plan et éléments */
-  --primary-background-color: #C14040; 
+  --primary-background-color: #C14040;
   --pokemon-card-background-color: #982c2c;
-  --accent-color: #E5543C;   
+  --accent-color: #E5543C;
   --dark-background-color: #383E42;
   --light-background-color: #F5E4E5;
 
   /* Couleurs textes */
   --header-title-color: #F5E4E5;
-  --body-text-color: #fff;  
+  --body-text-color: #fff;
 
-/* Couleurs filtres pokemons */
+  /* Couleurs filtres pokemons */
   --filters-container-background-color: #fff;
 
   /* Couleurs barre de recherche */
@@ -21,7 +21,7 @@
   --pokemons-types-list-background-color: #F5E4E5;
   --pokemons-types-list-border-color: #ccc;
   --pokemons-types-list-title-color: #383E42;
-  --pokemons-types-list-btn-3dEffect-color: #383E42; 
+  --pokemons-types-list-btn-3dEffect-color: #383E42;
 }
 
 * {
@@ -38,6 +38,7 @@ body {
   background-color: var(--primary-background-color);
   color: var(--body-text-color);
   overflow-x: hidden;
+  font-family: 'Press Start 2P', system-ui;
 }
 
 header {
@@ -47,13 +48,12 @@ header {
   justify-content: center;
   width: 90%;
   border-radius: 25px;
-  font-family: 'Press Start 2P', system-ui;
   margin: 1rem;
   padding: 1.2rem;
 }
 
 /*LOGO ET NOM DU SITE*/
-.header__pokedex-retro-js{
+.header__pokedex-retro-js {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -62,57 +62,74 @@ header {
   margin-bottom: 1rem;
 }
 
-.header__pokedex-retro-js__logo{
-  height:180px;
+.header__pokedex-retro-js__logo {
+  height: 180px;
 }
 
 .header__pokedex-retro-js__title {
   font-size: 1.75rem;
   line-height: 2rem;
-  color:var(--header-title-color);
+  color: var(--header-title-color);
   text-align: center;
   text-transform: uppercase;
 }
 
-/*HERO*/
-.header__hero{
+/*FILTRES: BARRE DE RECHERCHES ET BOUTONS TYPES POKEMONS*/
+
+
+
+
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* SECTION HERO */
+.hero {
+  width: 100%;
   display: flex;
   flex-flow: column-reverse nowrap;
   align-items: center;
   justify-content: center;
   gap: 2rem;
   margin-bottom: 2rem;
+  padding: 1rem;  
 }
 
-.header__hero__image{
+.hero__image {
   height: 200px;
 }
 
-.header__hero__title {
+.hero__title {
   font-size: 1.2rem;
   line-height: 1.5rem;
   text-align: center;
 }
 
-/*FILTRES: BARRE DE RECHERCHES ET BOUTONS TYPES POKEMONS*/
-.filters-container{
+/* SECTION FILTRES */
+.filters-container {
   background-color: var(--filters-container-background-color);
   border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  padding: 24px;
+  width: 90%;
+  padding: 1.3rem;
 }
-
 /* BARRE DE RECHERCHE */
 .search-bar {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 2rem 0 1rem 0;
+  padding-bottom:1rem;
+  margin-bottom: 1rem;
 }
 
 #search-input {
@@ -127,8 +144,8 @@ header {
   overflow: hidden;
 }
 
-#search-input:focus::placeholder{
-  color:transparent;
+#search-input:focus::placeholder {
+  color: transparent;
 }
 
 /*Icône: search */
@@ -166,7 +183,6 @@ header {
 /*FILTRE TYPES POKEMONS*/
 .types-list {
   width: 100%;
-  margin: 0.8rem;
   background-color: var(--pokemons-types-list-background-color);
   padding: 1rem;
   border-radius: 25px;
@@ -174,18 +190,19 @@ header {
 
 .types-list__header {
   display: flex;
-  flex-direction: row wrap;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
   padding: 1rem 0 0.8rem 0;
+  margin-bottom: 12px;
 }
 
 .types-list__header-title {
   font-size: 1rem;
   font-weight: bold;
-  text-align: justify;
-  margin-right: 1.5rem;
-  color:var(--pokemons-types-list-title-color);
+  text-align: left;
+  margin-right: 1rem;
+  color: var(--pokemons-types-list-title-color);
 }
 
 /* Bouton reset des filtres de type de Pokemons */
@@ -282,7 +299,7 @@ header {
 /* Boutons de filtre actifs des types de Pokemons - effet 3D : bouton appuyé */
 .type-filter-button.active {
   transform: translate(0em, 0.75em);
-  border:3px solid var(--pokemons-types-list-btn-3dEffect-color);
+  border: 3px solid var(--pokemons-types-list-btn-3dEffect-color);
 }
 
 .type-filter-button.active::before {
@@ -291,16 +308,9 @@ header {
   z-index: -2;
 }
 
-main {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: row wrap;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
-}
 
-/* LISTE POKEMONS */
+
+/* SECTION LISTE CARTES POKEMONS */
 #pokemons-list {
   display: flex;
   flex-flow: column;
@@ -398,6 +408,7 @@ main {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 #scroll-to-top:hover {
   background-color: var(--light-background-color);
 }
@@ -406,6 +417,7 @@ main {
   font-size: 24px;
   font-weight: bold;
 }
+
 #scroll-to-top:hover .material-symbols-outlined {
   color: var(--accent-color);
 }
@@ -423,15 +435,16 @@ footer {
   padding: 1rem;
 }
 
-.footer__logo{
-  height:150px;
+.footer__logo {
+  height: 150px;
 }
-.footer__infos{
+
+.footer__infos {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap:12px;
+  gap: 12px;
   line-height: 1.3rem;
 }
 
@@ -443,7 +456,7 @@ footer a {
 
 /* Responsive: Media queries tablette */
 @media screen and (min-width: 768px) {
-  .header__hero__image{
+  .hero__image {
     height: 400px;
   }
 
@@ -468,25 +481,29 @@ footer a {
 
 /* Responsive: Media queries desktop*/
 @media screen and (min-width: 1024px) {
-  .header__hero{
+  .hero {
     flex-flow: row nowrap;
+    max-width: 70%;
   }
 
-  .header__hero__image{
+  .hero__image {
     height: 500px;
   }
 
-  .header__hero__title {
+  .hero__title {
     font-size: 2rem;
     line-height: 2.8rem;
+    text-align: left;
+  }
+
+  .filters-container {
+    max-width: 80%;
+    padding: 2rem;
   }
 
   .types-list__header {
     justify-content: flex-start;
     width: 80%;
-  }
-
-  .types-list__header {
     margin-left: 2.5rem;
   }
 
