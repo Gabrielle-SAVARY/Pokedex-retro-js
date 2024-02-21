@@ -126,6 +126,9 @@ header {
   color: var(--search-bar-text-color);
   overflow: hidden;
 }
+#search-input:focus {
+
+}
 
 /*Icône: search */
 .search-bar__search-icon {
@@ -278,6 +281,7 @@ header {
 /* Boutons de filtre actifs des types de Pokemons - effet 3D : bouton appuyé */
 .type-filter-button.active {
   transform: translate(0em, 0.75em);
+  border:3px solid var(--pokemons-types-list-btn-3dEffect-color);
 }
 
 .type-filter-button.active::before {
