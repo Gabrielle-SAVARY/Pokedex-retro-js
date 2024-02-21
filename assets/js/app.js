@@ -40,14 +40,16 @@ const app = {
 
   // FONCTIONS DE SCROLL
   scrollToTopEffect: function () {
+    const filtersContainer = document.getElementById("filters-container");
     window.scrollTo({
-      top: 0,
+      top: filtersContainer.offsetTop -20, // laisse un espace de 20px en haut
       left: 0,
-      behavior: "smooth",
+      behavior: "smooth"
     });
   },
 
-  scrollToTop: function () {
+  // scroll to top au container des filtres
+  scrollToTopFiltersContainer: function () {
     const scrollToTopBtn = document.getElementById("scroll-to-top");
     // Gestion de l'affichage du bouton scroll to top
     if (
@@ -353,7 +355,7 @@ const app = {
     app.initHandlers();
     // Initialisation de l'écouteur d'événement pour le bouton scroll-to-top
     window.onscroll = function () {
-      app.scrollToTop();
+      app.scrollToTopFiltersContainer();
     };
   },
 };

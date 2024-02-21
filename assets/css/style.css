@@ -133,6 +133,7 @@ main {
 }
 
 #search-input {
+  width: 100%;
   font-family: 'Press Start 2P', system-ui;
   flex-grow: 1;
   padding: 10px;
