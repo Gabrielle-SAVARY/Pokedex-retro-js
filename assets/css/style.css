@@ -126,8 +126,9 @@ header {
   color: var(--search-bar-text-color);
   overflow: hidden;
 }
-#search-input:focus {
 
+#search-input:focus::placeholder{
+  color:transparent;
 }
 
 /*Icône: search */
