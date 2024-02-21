@@ -190,18 +190,20 @@ const app = {
       return;
     }
 
-    // Filtre des Pokémons
+    // Filtre des Pokémons (comportement "ET" / la carte doit avoir tous les types actifs)
     pokemonCards.forEach((pokemonCard) => {
       // Récupère le type du Pokémon
       const pokemonAllTypes = pokemonCard.querySelectorAll(".pokemon-type");
 
-      // Vérifie si au moins un des types du Pokémon correspond à l'un des types sélectionnés
-      const isMatch = Array.from(pokemonAllTypes).some((typeElement) => {
-        const pokemonType = typeElement.textContent;
-        return types.some((type) => pokemonType.includes(type));
+      // Vérifie si la carte Pokémon a tous les types actifs
+      const hasAllActiveTypes = app.activeTypes.every((activeType) => {
+        return Array.from(pokemonAllTypes).some((typeElement) => {
+          const pokemonType = typeElement.textContent;
+          return pokemonType.includes(activeType);
+        });
       });
 
-      if (isMatch) {
+      if (hasAllActiveTypes) {
         // Si le type correspond, affiche le Pokémon
         pokemonCard.style.display = "flex";
       } else {
