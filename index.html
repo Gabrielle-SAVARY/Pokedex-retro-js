@@ -29,8 +29,30 @@
     </header>
     <main>
         <section class="hero">
-            <h2 class="hero__title">Parcourer le pokédex de la première génération de pokémons</h2>
-            <img src="./assets/img/hero-pokemons-removebg.png" alt="pokemons starter et pikachu" class="hero__image">
+            <div class="hero__container">
+                <h2 class="hero__title">Parcourer le pokédex de la première génération de pokémons</h2>
+                <div class="hero__pokeball-container">
+                    <div class="hero__pokeball-layer1">
+                        <div class="hero__pokeball-layer2">  
+                            <!-- <button type="button" id="btn-show-pokedex" class="btn-test">
+                                VOIR LE POKEDEX
+                            </button>                           -->
+                        </div>
+                    </div>
+                </div>
+                <div class="test-container">
+                    <button type="button" id="btn-show-pokedex" class="btn-test">
+                        VOIR LE POKEDEX
+                    </button>
+                </div>
+                <!-- <button type="button" id="btn-show-pokedex" class="btn-test">
+                    VOIR LE POKEDEX
+                </button>      -->
+                <img id="hero__image" src="./assets/img/hero-pokemons-removebg.png" alt="pokemons starter et pikachu" class="hero__image">
+                <div class="hero__background">
+                    <img src="./assets/img/Mountains_background-removebg.png" alt="fond de pokédex" class="hero__background-image">
+                </div>
+            </div>
         </section>
 
         <section id="filters-container" class="filters-container">

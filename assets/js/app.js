@@ -42,7 +42,7 @@ const app = {
   scrollToTopEffect: function () {
     const filtersContainer = document.getElementById("filters-container");
     window.scrollTo({
-      top: filtersContainer.offsetTop -20, // laisse un espace de 20px en haut
+      top: filtersContainer.offsetTop - 20, // laisse un espace de 20px en haut
       left: 0,
       behavior: "smooth"
     });
@@ -331,6 +331,31 @@ const app = {
     app.handleReset("reset-search-button");
   },
 
+
+  handleScrollShowPokedex: function () {
+    const showPokedexButton = document.getElementById("btn-show-pokedex");
+    const heroPokemonsImg = document.getElementById("hero__image");
+    // Ajoutez une classe pour appliquer la transition
+    heroPokemonsImg.classList.add("fade-in");
+
+    // Utilisez setTimeout pour déclencher l'animation après 5 secondes
+    heroPokemonsImg.style.opacity = "1";
+    heroPokemonsImg.style.zIndex = "2";
+
+    setTimeout(() => {
+      app.scrollToTopEffect();
+      setTimeout(() => {
+        heroPokemonsImg.style.opacity = "0";  
+        heroPokemonsImg.style.zIndex = "0";
+      }, 2000);
+    }, 900);
+  },
+
+  handleClickScrollShowPokedex: function () {
+    const showPokedexButton = document.getElementById("btn-show-pokedex");
+    showPokedexButton.addEventListener("click", app.handleScrollShowPokedex);
+  },
+
   // INITIALISATION DE L'APPLICATION
   // Récupération des données
   loadPokedex: async function () {
@@ -346,6 +371,7 @@ const app = {
   initHandlers: function () {
     app.handleTypeSearchBar();
     app.handleClickResetBtn();
+    app.handleClickScrollShowPokedex();
   },
   // Initialisation de l'application
   init: function () {

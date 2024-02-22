@@ -50,6 +50,7 @@ header {
   border-radius: 25px;
   margin: 1rem;
   padding: 1.2rem;
+  height: 10rem;
 }
 
 /*LOGO ET NOM DU SITE*/
@@ -63,7 +64,7 @@ header {
 }
 
 .header__pokedex-retro-js__logo {
-  height: 180px;
+  height: 130px;
 }
 
 .header__pokedex-retro-js__title {
@@ -91,25 +92,121 @@ main {
 
 /* SECTION HERO */
 .hero {
+  height: 100vh;
   width: 100%;
   display: flex;
-  flex-flow: column-reverse nowrap;
+  flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
   gap: 2rem;
   margin-bottom: 2rem;
-  padding: 1rem;  
+  /* padding: 1rem;   */
+  /* background-image: url('../img/Mountains_background-removebg.png') ;
+  background-repeat: repeat-x;
+  background-size: contain; */
+}
+
+.hero__container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 1rem;
+  min-height: 100vh;
+  margin-top: 12rem;
+  
+  
+}
+
+.hero__background {
+  position: absolute;
+  /* top: 30vh; */
+  left: 0;
+  bottom: 20rem;
+  width: 100%;
+  max-height: 40vh;
+
+  z-index: -2;
+
+
+  /* background-image: url('../img/Mountains_background-removebg.png') ;
+  background-repeat: repeat-x;
+  background-size: contain; */
+
+}
+
+.hero__background img {
+  width: 100%;
+
+  object-fit: contain;
+  /* background-repeat: repeat-x; */
+  /* object-position: center; */
+
 }
 
 .hero__image {
-  height: 200px;
+  /* display: none; */
+  opacity: 0;
+  width: 40%;
+  max-width: 660px;
+  position: absolute;
+  bottom: -80px;
+  
+
+
+
+  /* bottom: -220px; */
+  
+  /* height: 200px; */
+  /* right: 32px; */
 }
 
 .hero__title {
   font-size: 1.2rem;
   line-height: 1.5rem;
   text-align: center;
+  text-shadow:
+  -2px -2px 0 black,
+  2px -2px 0 black,
+  -2px 2px 0 black,
+  2px 2px 0 black;
 }
+
+.hero__pokeball-container {
+  position: absolute;
+  bottom: -175px;
+  z-index: -1;
+}
+
+
+
+
+.hero__pokeball-layer1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 350px;
+  background-color: var(--pokemon-card-background-color);
+  border: 40px solid var(--light-background-color);
+  border-radius: 50%;
+}
+.hero__pokeball-layer2{
+  height: 125px;
+  width: 125px;
+  background-color: var(--accent-color);
+  border: 20px solid var(--light-background-color);
+  border-radius: 50%;
+  
+}
+
+.fade-in {
+  transition: opacity 1s ease; /* Ajoutez votre durée et fonction de transition préférées ici */
+}
+
+
+
 
 /* SECTION FILTRES */
 .filters-container {
@@ -121,14 +218,17 @@ main {
   justify-content: center;
   width: 90%;
   padding: 1.3rem;
+
+  margin-top: 20rem;
 }
+
 /* BARRE DE RECHERCHE */
 .search-bar {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-  padding-bottom:1rem;
+  padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -234,6 +334,82 @@ main {
   width: 100%;
   margin-bottom: 1rem;
   gap: 1rem;
+}
+
+.test-container{
+  position: absolute;
+  bottom: -20px;
+}
+
+.btn-test{
+  background-color: var(--light-background-color);
+  margin: 0.3rem;
+  padding: 8px;
+  min-width: fit-content;
+  width: 80px;
+  /* max-width: 20%; */
+  height:4rem;
+  font-family: 'Press Start 2P', system-ui;
+  font-size: 9px;
+  border: 2px solid black;
+  color: var(--body-text-color);
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+  cursor: pointer;
+
+  /*/ effet 3D  */
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+  z-index: 1;
+  opacity: 1;
+}
+.btn-test::before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--pokemons-types-list-btn-3dEffect-color);
+  border-radius: inherit;
+
+  /*/ EFFET 3D  */
+  box-shadow: 0 0 0 2px black, 0 0.525em 0 0 rgba(0, 0, 0, 0.19);
+  /*bordure et ombre de la profondeur sous bouton*/
+  transform: translate3d(0, 0.75em, -1em);
+  /* effet de profondeur: axe z */
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+  z-index: -1
+
+}
+.btn-test:hover{
+  transform: translate(0, 0.25em);
+  z-index: 2;
+
+}
+.btn-test:hover::before{
+  box-shadow: 0 0 0 2px black, 0 0.4em 0 0 rgba(0, 0, 0, 0.19);
+  transform: translate3d(0, 0.5em, -2em);
+  z-index: -2;
+
+}
+.btn-test:active{
+  transform: translate(0em, 0.75em);
+  border: 3px solid var(--pokemons-types-list-btn-3dEffect-color);
+
+}
+.btn-test:active::before{
+  box-shadow: 0 0 0 2px black, 0 0 rgba(0, 0, 0, 0.19);
+  transform: translate3d(0, 0, -1em);
+  z-index: -2;
 }
 
 /*Bouton filtre type pokemon*/
@@ -461,6 +637,21 @@ footer a {
     height: 400px;
   }
 
+  .hero__pokeball-container {
+    bottom: -350px;
+  }
+  .hero__pokeball-layer1{
+    height: 700px;
+    width: 700px;
+    border: 40px solid var(--light-background-color);
+    border-radius: 50%;
+  }
+  .hero__pokeball-layer2{
+    height: 250px;
+    width: 250px;
+    border: 20px solid var(--light-background-color);    
+  }
+
   .search-bar {
     width: 80%;
   }
@@ -484,7 +675,7 @@ footer a {
 @media screen and (min-width: 1024px) {
   .hero {
     flex-flow: row nowrap;
-    max-width: 70%;
+    /* max-width: 70%; */
   }
 
   .hero__image {
@@ -495,6 +686,50 @@ footer a {
     font-size: 2rem;
     line-height: 2.8rem;
     text-align: left;
+  }
+
+  .hero__pokeball-container {
+    bottom: -350px;
+  }
+  .hero__pokeball-layer1{
+    height: 700px;
+    width: 700px;
+    border: 40px solid var(--light-background-color);
+    border-radius: 50%;
+  }
+  .hero__pokeball-layer2{
+    height: 250px;
+    width: 250px;
+    border: 20px solid var(--light-background-color);    
+  }
+
+  .btn-test{
+    background-color: var(--light-background-color);
+    margin: 0.3rem;
+    padding: 8px;
+    min-width: fit-content;
+    width: 8rem;
+    max-width: 30%;
+    height:8rem;
+    font-family: 'Press Start 2P', system-ui;
+    font-size: 12px;
+    border: 2px solid black;
+    color: var(--body-text-color);
+    text-shadow:
+      -1px -1px 0 black,
+      1px -1px 0 black,
+      -1px 1px 0 black,
+      1px 1px 0 black;
+    cursor: pointer;
+  
+    /*/ effet 3D  */
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+    z-index: 1;
+    opacity: 1;
   }
 
   .filters-container {
