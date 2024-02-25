@@ -154,7 +154,7 @@ const app = {
       // Création du bouton
       const button = document.createElement("button");
       button.textContent = type.typeName;
-      button.classList.add("type-filter-button");
+      button.classList.add("type-filter-button", "btn-retro");
       button.style.backgroundColor = type.typeColor;
 
       // Ajoute un écouteur d'événement pour le clic sur le bouton
@@ -331,29 +331,25 @@ const app = {
     app.handleReset("reset-search-button");
   },
 
-
-  handleScrollShowPokedex: function () {
-    const showPokedexButton = document.getElementById("btn-show-pokedex");
-    const heroPokemonsImg = document.getElementById("hero__image");
-    // Ajoutez une classe pour appliquer la transition
-    heroPokemonsImg.classList.add("fade-in");
-
-    // Utilisez setTimeout pour déclencher l'animation après 5 secondes
-    heroPokemonsImg.style.opacity = "1";
-    heroPokemonsImg.style.zIndex = "2";
-
+  // Scroll sur pokedex et animation du bouton de la hero page
+  handleClickScrollShowPokedex: function () {
+    const showPokedexBtn = document.getElementById("btn-scroll-to-pokedex");
+    showPokedexBtn.classList.add("btn-scroll-to-pokedex-active");
+    
     setTimeout(() => {
       app.scrollToTopEffect();
-      setTimeout(() => {
-        heroPokemonsImg.style.opacity = "0";  
-        heroPokemonsImg.style.zIndex = "0";
-      }, 2000);
-    }, 900);
-  },
+    showPokedexBtn.classList.remove("btn-scroll-to-pokedex-active");
+  }, 800);
+  
+  setTimeout(() => {
+    showPokedexBtn.classList.remove("btn-scroll-to-pokedex-active");
+  }, 900);
+},
 
-  handleClickScrollShowPokedex: function () {
-    const showPokedexButton = document.getElementById("btn-show-pokedex");
-    showPokedexButton.addEventListener("click", app.handleScrollShowPokedex);
+  // Ecouteur d'événement sur le bouton "voir le pokedex" de la hero page
+  handleClickListenerHeroBtn: function () {
+    const showPokedexButton = document.getElementById("btn-scroll-to-pokedex");
+    showPokedexButton.addEventListener("click", app.handleClickScrollShowPokedex);
   },
 
   // INITIALISATION DE L'APPLICATION
@@ -371,7 +367,7 @@ const app = {
   initHandlers: function () {
     app.handleTypeSearchBar();
     app.handleClickResetBtn();
-    app.handleClickScrollShowPokedex();
+    app.handleClickListenerHeroBtn();
   },
   // Initialisation de l'application
   init: function () {
