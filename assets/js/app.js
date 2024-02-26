@@ -130,17 +130,14 @@ const app = {
   toggleActiveType: function (type) {
     // Vérifie si le type est actif
     const isTypeActive = app.activeTypes.includes(type);
-    console.log(type, "isTypeActive", isTypeActive);
 
     if (!isTypeActive) {
       // Si le type n'est pas dans le tableau, l'ajoute
       app.activeTypes.push(type);
-      console.log("FALSE", app.activeTypes);
     } else {
       // Sinon, supprime le type du tableau
       const typeIndex = app.activeTypes.indexOf(type);
       app.activeTypes.splice(typeIndex, 1);
-      console.log("TRUE", app.activeTypes);
     }
   },
 
@@ -213,6 +210,9 @@ const app = {
         pokemonCard.style.display = "none";
       }
     });
+
+    // Affiche un message si aucun Pokémon n'est trouvé
+    app.handleResultMessage();
   },
 
   // Fonction pour retirer les accents d'une chaîne
@@ -225,14 +225,14 @@ const app = {
     // Texte recherché par l'utilisateur
     const searchInput = document.getElementById("search-input");
     const searchTerm = searchInput.value.toLowerCase();
-    console.log(searchTerm, "searchTerm");
+ 
     // Si la barre de recherche est vide affiche tous les Pokemons
     if (searchTerm.length === 0) {
       app.showAllPokemon();
     }
+
     // Normalise le texte recherché
     const normalizeSearchTerm = app.removeAccents(searchTerm);
-    console.log(normalizeSearchTerm, "normalizeSearchTerm");
 
     if (normalizeSearchTerm) {
       // Sépare le texte recherché en termes de recherche en ignorant les espaces
@@ -276,7 +276,10 @@ const app = {
           pokemonCard.style.display = "none";
         }
       });
-    }
+      // Affiche un message si aucun Pokémon n'est trouvé
+      app.handleResultMessage();
+    }   
+    
     // Supprime la classe active de tous les boutons filtres de type
     app.clearActiveTypeFilter();
   },
@@ -288,6 +291,21 @@ const app = {
     pokemonCards.forEach((pokemonCard) => {
       pokemonCard.style.display = "flex";
     });
+
+    // Affiche un message si aucun Pokémon n'est trouvé
+    app.handleResultMessage();
+  },
+
+  // Affiche un message si aucun Pokémon n'est trouvé
+  handleResultMessage: function () {
+    const pokemonCards = document.querySelectorAll(".pokemon-card");
+    const noResult = document.getElementById("pokemons-no-found");
+ 
+    if([...pokemonCards].every((card) => card.style.display === "none")) {
+      noResult.style.display = "block";
+    } else {
+      noResult.style.display = "none";
+    }
   },
 
   // Vide la barre de recherche

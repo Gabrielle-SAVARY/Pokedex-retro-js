@@ -198,33 +198,31 @@ main {
     2px -2px 0 black,
     -2px 2px 0 black,
     2px 2px 0 black;
-  }
+}
 
-  .hero__infos__description {
-    width: 80%;
-    text-align: justify;
-    font-family: "Anta", sans-serif;
-    font-size: 1.1rem;
-    line-height: 2rem;
-    text-shadow:
+.hero__infos__description {
+  max-width: 80%;
+  text-align: justify;
+  font-family: "Anta", sans-serif;
+  font-size: 1.1rem;
+  line-height: 2rem;
+  text-shadow:
     -2px -2px 0 black,
     2px -2px 0 black,
     -2px 2px 0 black,
-    2px 2px 0 black;    
-    padding-top: 1rem;
-    margin: 0.8rem 0 1.2rem;
+    2px 2px 0 black;
+  padding-top: 1rem;
+  margin: 0.8rem 0 1.2rem;
+}
 
-  }
-  
-  
-  .hero__infos__btn-container {
-    padding-top: 2rem;    
-  }
-  
-  .btn-scroll-to-pokedex {
-  padding:1rem;
+.hero__infos__btn-container {
+  padding-top: 2rem;
+}
+
+.btn-scroll-to-pokedex {
+  padding: 1rem;
   border-radius: 5px;
-  border:3px solid black;
+  border: 3px solid black;
   font-size: 0.9rem;
   background-color: var(--accent-color);
 }
@@ -252,8 +250,16 @@ main {
 }
 
 
+/*SECTION POKEDEX*/
+#pokedex {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
 
-/* SECTION FILTRES */
+/* FILTRES */
 .filters-container {
   background-color: var(--filters-container-background-color);
   border-radius: 25px;
@@ -383,10 +389,7 @@ main {
   gap: 1rem;
 }
 
-/*Bouton filtre type pokemon*/
-.type-filter-button {}
-
-/* SECTION LISTE CARTES POKEMONS */
+/* LISTE CARTES POKEMONS */
 #pokemons-list {
   display: flex;
   flex-flow: column;
@@ -423,14 +426,11 @@ main {
   filter: sepia(50%) saturate(150%);
 }
 
-
-
 .pokemon-card:hover .pokemon-img {
   transform: scale(1.15);
   /* Augmente la taille de 20% */
   filter: none;
 }
-
 
 /*Informations pokemon: numéro index et nom*/
 .pokemon-infos {
@@ -472,6 +472,22 @@ main {
     1px 1px 0 black;
 }
 
+#pokemons-no-found {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  padding: 2rem 0 2rem 0;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+.pokemons-no-found__img {
+  height: 200px;
+}
+
 /* Bouton scroll to top page */
 #scroll-to-top {
   position: fixed;
@@ -497,6 +513,7 @@ main {
 #scroll-to-top:hover .material-symbols-outlined {
   color: var(--accent-color);
 }
+
 
 footer {
   display: flex;
@@ -543,7 +560,7 @@ footer a {
   }
 
   .hero__infos__description {
-    text-align: left;
+    text-align: justify;
   }
 
   .search-bar {
@@ -591,7 +608,7 @@ footer a {
     flex-grow: unset;
     align-items: flex-start;
   }
-  
+
   .hero__infos__title {
     font-size: 2.2rem;
     line-height: 3.2rem;
@@ -599,6 +616,7 @@ footer a {
   }
 
   .hero__infos__description {
+    text-align: left;
     width: 100%;
     font-size: 2rem;
     line-height: 2.8rem;
@@ -608,11 +626,11 @@ footer a {
   .btn-scroll-to-pokedex {
     font-size: 1.1rem;
   }
-  
+
   .hero__image {
     width: 50%;
   }
-  
+
   .filters-container {
     max-width: 80%;
     padding: 2rem;

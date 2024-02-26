@@ -12,7 +12,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-	<link rel="stylesheet" 		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./assets/css/reset.css">
 	<link rel="stylesheet" href="./assets/css/style.css">
@@ -31,7 +32,8 @@
 			<div class="hero__container">
 				<div class="hero__infos">
 					<h2 class="hero__infos__title">Parcourez le pokédex de la première génération de pokémons</h2>
-					<p class="hero__infos__description">Retrouvez la nostalgie des pokémons des années&nbsp;90. <br>À défaut  de pouvoir "tous les attraper", "filtrez&nbsp;les&nbsp;tous"&nbsp;!</p>
+					<p class="hero__infos__description">Retrouvez la nostalgie des pokémons des années&nbsp;90. <br>À
+						défaut de pouvoir "tous les attraper", "filtrez&nbsp;les&nbsp;tous"&nbsp;!</p>
 					<div class="hero__infos__btn-container">
 						<button type="button" id="btn-scroll-to-pokedex" class="btn-scroll-to-pokedex btn-retro">
 							VOIR LE POKEDEX
@@ -40,39 +42,45 @@
 				</div>
 				<img id="hero__image" src="./assets/img/hero-pokemons-removebg.png" alt="pokemons starter et pikachu"
 					class="hero__image">
-				</div>
+			</div>
 
 		</section>
-
-		<section id="filters-container" class="filters-container">
-			<div class="search-bar">
-				<span class="material-symbols-outlined search-bar__search-icon">
-					search
-				</span>
-				<input type="text" id="search-input" placeholder="Rechercher un Pokémon, un type ...">
-				<button id="reset-search-button">
-					<span class="material-symbols-outlined search-bar__close-icon" title="vide la barre de recherche">
-						close
+		<section id="pokedex">
+			<div id="filters-container" class="filters-container">
+				<div class="search-bar">
+					<span class="material-symbols-outlined search-bar__search-icon">
+						search
 					</span>
-				</button>
-			</div>
-			<div class="types-list">
-				<div class="types-list__header">
-					<h3 class="types-list__header-title">Filtrer les pokémons par type</h3>
-					<button id="reset-filter-button">
-						<span class="material-symbols-outlined search-bar__close-icon" title="supprime tous les filtres">
+					<input type="text" id="search-input" placeholder="Rechercher un Pokémon, un type ...">
+					<button id="reset-search-button">
+						<span class="material-symbols-outlined search-bar__close-icon"
+							title="vide la barre de recherche">
 							close
 						</span>
 					</button>
 				</div>
-				<div class="types-list__filters-container">
-					<!-- Boutons de filtre des types de Pokémon affichés ici -->
+				<div class="types-list">
+					<div class="types-list__header">
+						<h3 class="types-list__header-title">Filtrer les pokémons par type</h3>
+						<button id="reset-filter-button">
+							<span class="material-symbols-outlined search-bar__close-icon"
+								title="supprime tous les filtres">
+								close
+							</span>
+						</button>
+					</div>
+					<div class="types-list__filters-container">
+						<!-- Boutons de filtre des types de Pokémon affichés ici -->
+					</div>
 				</div>
 			</div>
-		</section>
-
-		<section id="pokemons-list">
-			<!-- Pokemons affichés ici -->
+			<div id="pokemons-list">
+				<!-- Pokemons affichés ici -->
+			</div>
+			<div id="pokemons-no-found">
+				<p class="pokemons-no-found__text">Oups il n'y a pas de pokémons correspondants à la recherche...</p>
+				<img class="pokemons-no-found__img" src="./assets/img/sad_face.png" alt="visage triste">
+			</div>
 		</section>
 		<button type="button" id="scroll-to-top">
 			<span class="material-symbols-outlined">
