@@ -159,8 +159,7 @@ main {
 
 /* SECTION HERO */
 .hero {
-  margin-top: -12.5rem;
-  height: calc(100vh - 7.5rem);
+  min-height: calc(100vh - 14.6rem);
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -191,8 +190,8 @@ main {
 }
 
 .hero__infos__title {
-  font-size: 1.2rem;
-  line-height: 2.2rem;
+  font-size: 1.1rem;
+  line-height: 2.1rem;
   text-align: center;
   text-shadow:
     -2px -2px 0 black,
@@ -202,14 +201,19 @@ main {
   }
 
   .hero__infos__description {
-    font-size: 0.9rem;
-    line-height: 1.6rem;
+    width: 80%;
+    text-align: justify;
+    font-family: "Anta", sans-serif;
+    font-size: 1.1rem;
+    line-height: 2rem;
     text-shadow:
     -2px -2px 0 black,
     2px -2px 0 black,
     -2px 2px 0 black,
-    2px 2px 0 black;  
+    2px 2px 0 black;    
     padding-top: 1rem;
+    margin: 0.8rem 0 1.2rem;
+
   }
   
   
@@ -342,6 +346,7 @@ main {
 
 .types-list__header-title {
   font-size: 1rem;
+  line-height: 1.3rem;
   font-weight: bold;
   text-align: left;
   margin-right: 1rem;
@@ -537,6 +542,10 @@ footer a {
     line-height: 2.8rem;
   }
 
+  .hero__infos__description {
+    text-align: left;
+  }
+
   .search-bar {
     width: 80%;
   }
@@ -584,14 +593,16 @@ footer a {
   }
   
   .hero__infos__title {
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 2.2rem;
+    line-height: 3.2rem;
     text-align: left;
   }
 
   .hero__infos__description {
-    font-size: 1rem;
-    line-height: 1.8rem;
+    width: 100%;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    margin: 1.5rem 0 3rem;
   }
 
   .btn-scroll-to-pokedex {
