@@ -42,7 +42,7 @@ Visible lors du défilement du pokedex, ce bouton permet de revenir en haut de l
 </br>
 </br>
 
-## **<u>LAANCEZ LE POKÉDEX</u>**
+## **<u>LANCEZ LE POKÉDEX</u>**
 Le site est en ligne, vous pouvez explorer le Pokédex:  [EN CLIQUANT ICI](https://gabrielle-savary.github.io/Pokedex-retro-js/)</br>
 </br>
 <u>**Version Dev**</u>
@@ -72,4 +72,4 @@ Le site est en ligne, vous pouvez explorer le Pokédex:  [EN CLIQUANT ICI](https
 
 
 ## **<u>MENTIONS</u>**
-Les images proveniennent du site [Pokekalos](https://www.pokekalos.fr/jeux/tools/download.html)</br>
+Les images des Pokémons proviennent du site [Pokekalos](https://www.pokekalos.fr/jeux/tools/download.html)</br>
